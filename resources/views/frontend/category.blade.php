@@ -4,27 +4,44 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<style type="text/css">
+    .cell-pro-home img {
+      
+        height: 152px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .div-prododuct{
+        padding: 0;
+    }
+
+</style>
+
  <div class="content" style="background:#FFF">
         <div class="img-poster" style="position:relative"></div>
         <div class="c"></div>
+
+            @if(\Request::route()->getName()!='search-product-frontend' && !empty($data))
             <div class="grid">
                 <div class="crumb"><a href="../index.htm"><i class="fa fa-home"></i></a> <i class="fa fa-angle-right"></i> <a href="{{ route('details', $link) }}">{{ $name_cate }}</a></div>
                 <div class="c5"></div>
             </div>
+            @endif
             <div class="c10"></div>
             <div class="grid">
-                <h1 class="title-page"><a>{{ $name_cate }}</a></h1>
+                <h1 class="title-page"><a>{{ @$name_cate }}</a></h1>
                 <div class="c5"></div>
                
                 <div class="c20" style="border-bottom:solid 1px #CCC;"></div>
                 <div class="c20"></div>
-                <div class="flex-container flex-space-between">
+                <div>
 
                     
                     @if(!empty($data)&& $data->count()>0)
                     @foreach($data as $value)
-                    <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
-                        <div class='discount-tags'>-13%</div>
+                    <div class="col-md-3 col-xs-6 cell-pro-home float div-prododuct">
+                        <!-- <div class='discount-tags'>-13%</div> -->
                         <div style="overflow: hidden; border:solid 1px #EEE; position:relative;"> 
                             <a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}"><img src="{{ asset($value->Image)}}" alt="{{ $value->Name }}" width="100%"></a> 
                             <a class="cart-icon" href="{{ route('details', $value->Link) }}"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>

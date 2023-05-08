@@ -41,8 +41,8 @@
                     <div class="c20"></div>
                     <div class="c10"></div>
                     <div class="search-pc">
-                        <form action="/search/" method="get" id="searchformtab">
-                            <input name="qr" class="kw" placeholder="Tìm kiếm " type="text">
+                        <form action="{{ route('search-product-frontend') }}" method="get" id="searchformtab">
+                            <input name="key" class="kw" placeholder="Tìm kiếm " type="text" required>
                             <a href="#" class="fa fa-search submit-search-pc" onclick="$('#searchformtab').submit();return false;"><img style="float: left;"></a>
                         </form>
                     </div>
