@@ -95,10 +95,38 @@
                     
                     <div class="swiper-container gallery-top">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><a href="../uploaded/abc/ava/f8bc846590c0569e0fd1%20%281%29.jpg" onclick="return hs.expand(this)"><img src="../temp/-uploaded-abc-ava_f8bc846590c0569e0fd1%20%281%29_cr_800x800.jpg" alt="Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng" width="100%"></a></div>
-                            <div class="swiper-slide"><a href="../uploaded/san-pham/noi-chao-cham-bear-1.6l/noi-chao-cham-bear-1%20%287%29.jpg" onclick="return hs.expand(this)"><img src="../temp/-uploaded-san-pham-noi-chao-cham-bear-1.6l_noi-chao-cham-bear-1%20%287%29_cr_800x800.jpg" alt="Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng" width="100%"></a></div>
-                            <div class="swiper-slide"><a href="../uploaded/san-pham/noi-chao-cham-bear-1.6l/noi-chao-cham-bear-1%20%282%29.jpg" onclick="return hs.expand(this)"><img src="../temp/-uploaded-san-pham-noi-chao-cham-bear-1.6l_noi-chao-cham-bear-1%20%282%29_cr_800x800.jpg" alt="Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng" width="100%"></a></div>
-                            <div class="swiper-slide"><a href="../uploaded/seo/combo/96c58bed71ddb383eacc.jpg" onclick="return hs.expand(this)"><img src="../temp/-uploaded-seo-combo_96c58bed71ddb383eacc_cr_800x800.jpg" alt="Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng" width="100%"></a></div>
+                             <?php 
+                            $image_product = strstr(basename($data->Image), '_');
+                        ?>
+
+                            <?php 
+                            $images_products = Cache::rememberForever('image_product'.$data->id, function() use ($data) {
+
+                                $images = App\Models\image::where('product_id', $data->id)->where('active', 1)->select('image')->get()??'';
+
+                                return $images;
+                            
+                            });
+
+                           
+                        
+                        ?>
+
+                        @if(isset($images_products))
+                       
+                        @foreach( $images_products as $image)
+
+                        @if(!empty($image->image) && '_'.basename($image->image) != $image_product)
+
+                       
+
+                            <div class="swiper-slide"><a href="../uploaded/abc/ava/f8bc846590c0569e0fd1%20%281%29.jpg" onclick="return hs.expand(this)"><img src="{{ asset($image->image) }}" alt="Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng" width="100%"></a></div>
+
+                        @endif    
+
+                        @endforeach   
+                         
+                        @endif 
                         </div>
                         <div class="swiper-button-next swiper-button-white"></div>
                         <div class="swiper-button-prev swiper-button-white"></div>
@@ -111,10 +139,24 @@
                         <a href="#" class="thumb-image-pro-detail-next"></a>
                         <div class="swiper-container gallery-thumbs">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../temp/-uploaded-abc-ava_f8bc846590c0569e0fd1%20%281%29_cr_160x160.jpg" width="100%"></div>
-                                <div class="swiper-slide"><img src="../temp/-uploaded-san-pham-noi-chao-cham-bear-1.6l_noi-chao-cham-bear-1%20%287%29_cr_160x160.jpg" width="100%"></div>
-                                <div class="swiper-slide"><img src="../temp/-uploaded-san-pham-noi-chao-cham-bear-1.6l_noi-chao-cham-bear-1%20%282%29_cr_160x160.jpg" width="100%"></div>
-                                <div class="swiper-slide"><img src="../temp/-uploaded-seo-combo_96c58bed71ddb383eacc_cr_160x160.jpg" width="100%"></div>
+
+                                @if(isset($images_products))
+                       
+                                @foreach( $images_products as $image)
+
+                                @if(!empty($image->image) && '_'.basename($image->image) != $image_product)
+
+                                <div class="swiper-slide"><img src="{{ asset($image->image) }}" width="100%"></div>
+
+                                @endif    
+
+                                @endforeach 
+
+                                @endif
+
+                               
+
+                               
                             </div>
                         </div>
                     </div>
