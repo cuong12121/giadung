@@ -192,12 +192,12 @@
                         </div>
                         <div class="c5"></div>
                         <div class="c10" style="border-top: solid 1px #EEE"></div>
-                        <div class="content-text pro-intro-detail">
+                       <!--  <div class="content-text pro-intro-detail">
                             <p condensed="" roboto="" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: "><span style="font-size:16px;"><span style="line-height:2;"><span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️</b><strong style="box-sizing: border-box;">COMBO</strong>&nbsp;gồm: Nồi nấu chậm Bear 1.6L +&nbsp;m&aacute;y xay ăn dặm Bear 0.6L</span></span></span></p>
                             <p condensed="" dir="ltr" roboto="" role="presentation" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: "><span style="font-size:16px;"><span style="line-height:2;"><span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️Dễ sử dụng:&nbsp;</b>T&iacute;ch hợp nhiều chức năng xay, nấu tự động; thao t&aacute;c sử dụng đơn giản</span></span></span></p>
                             <p condensed="" dir="ltr" roboto="" role="presentation" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: "><span style="font-size:16px;"><span style="line-height:2;"><span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️Th&ocirc;ng minh:&nbsp;</b>Chế độ nấu, hấp, hầm c&aacute;ch thủy, giữ 100%&nbsp;gi&aacute; trị dinh dưỡng</span></span></span></p>
                             <p condensed="" dir="ltr" roboto="" role="presentation" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: "><span style="font-size:16px;"><span style="line-height:2;"><span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️</b><strong style="box-sizing: border-box;">Tiện lợi:</strong><b style="box-sizing: border-box;">&nbsp;</b>Tiết kiệm thời gian, c&ocirc;ng sức nấu; tiết kiệm điện hiệu quả&nbsp;</span></span></span></p>
-                        </div>
+                        </div> -->
                         <div class="c10"></div>
                         <!-- AddThis Button BEGIN -->
                         <div class="addthis_toolbox addthis_default_style "> 
@@ -331,129 +331,25 @@
             <h3 class="title-other-news">Sản phẩm cùng loại</h3>
             <div class="c20" style="border-top:solid 1px #CCC"></div>
             <div class="flex-container flex-space-between">
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-38%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="noi-com-dien-bear-dfbb20a1.html"><img src="../temp/uploaded-san-pham-Avatar%20tr%E1%BA%AFng%20chu%E1%BA%A9n_P20N5_thumbcr_400x400.jpg" alt="Nồi cơm điện 2L Bear DFB-P20N5 " width="100%"></a> </div>
-                    <h2 class="product-name"><a href="noi-com-dien-bear-dfbb20a1.html">Nồi cơm điện 2L Bear DFB-P20N5 </a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>1,490,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">919,000 đ</div>
+                @if(!empty($other_product))
+                @foreach($other_product as $value)
+                <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
+                        <div class='discount-tags'>-13%</div>
+                        <div style="overflow: hidden; border:solid 1px #EEE; position:relative;"> 
+                            <a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}"><img src="{{ asset($value->Image)}}" alt="{{ $value->Name }}" width="100%"></a> 
+                            <a class="cart-icon" href="{{ route('details', $value->Link) }}"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                        </div>
+                        <h3 class="product-name"><a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}">{{ $value->Name }}</a></h3>
+                        <div class="c5"></div>
+                        <div style="float: left;">
+                            <!-- <div class="pricekm"><s>1,490,000đ </s></div>
+                            <div class="c3"></div> -->
+                            <div class="price">{{ @str_replace(',' ,'.', number_format($value->Price)) }}đ</div>
+                        </div>
                     </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-38%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="combo-1-noi-nau-chao-bear-08l-may-xay-an-dam-bear-03l.html"><img src="../temp/uploaded-abc-ava_27195aca4e6f8831d17e%20%281%29_thumbcr_400x400.jpg" alt="Combo 1: Nồi 0.8L + máy xay 0.3L + Quà tặng" width="100%"></a> </div>
-                    <h2 class="product-name"><a href="combo-1-noi-nau-chao-bear-08l-may-xay-an-dam-bear-03l.html">Combo 1: Nồi 0.8L + máy xay 0.3L + Quà tặng</a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>1,540,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">950,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-25%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="may-xay-an-dam-03l-bear-qsja01f2-grb03v2.html"><img src="../temp/uploaded-san-pham-Avatar%20tr%E1%BA%AFng%20chu%E1%BA%A9n_B03V2_thumbcr_400x400.jpg" alt="Máy xay ăn dặm Bear 0.3L GR-B03V2" width="100%"></a> </div>
-                    <h2 class="product-name"><a href="may-xay-an-dam-03l-bear-qsja01f2-grb03v2.html">Máy xay ăn dặm Bear 0.3L GR-B03V2</a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>790,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">590,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-13%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="noi-nau-chao-cham-bear-25l-tu-sa.html"><img src="../temp/uploaded-san-pham-AVATAR%20tr%E1%BA%AFng_T%E1%BB%AD%20sa_thumbcr_400x400.png" alt="Nồi nấu cháo chậm Bear 2,5l C25R6" width="100%"></a> </div>
-                    <h2 class="product-name"><a href="noi-nau-chao-cham-bear-25l-tu-sa.html">Nồi nấu cháo chậm Bear 2,5l C25R6</a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>1,490,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">1,290,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-24%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="../noi-nau-cham-bear/noi-nau-chao-cham-bear-08l-ban-quoc-te.html"><img src="../temp/uploaded-seo-ava%20sp_noi-nau-cham-08l-bear-sube001-ban-quoc-te_11012021_thumbcr_400x400.jpg" alt="Nồi nấu cháo chậm Bear 0.8L SUBE001" width="100%"></a> </div>
-                    <h2 class="product-name"><a href="../noi-nau-cham-bear/noi-nau-chao-cham-bear-08l-ban-quoc-te.html">Nồi nấu cháo chậm Bear 0.8L SUBE001</a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>650,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">490,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-15%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="noi-lau-nuong-3-khay-bear-3in1.html"><img src="../temp/uploaded-seo-ava%20sp_noi-lau-nuong-3-khay-bear-sube004-hang-quoc-te_15032021_thumbcr_400x400.jpg" alt="Nồi lẩu nướng 3 khay Bear SUBE004" width="100%"></a> </div>
-                    <h2 class="product-name"><a href="noi-lau-nuong-3-khay-bear-3in1.html">Nồi lẩu nướng 3 khay Bear SUBE004</a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>1,790,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">1,509,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-17%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="may-xay-an-dam-06l-bear-qsjd02q1.html"><img src="../temp/uploaded-san-pham-Avatar%20tr%E1%BA%AFng%20chu%E1%BA%A9n_D02Q1_thumbcr_400x400.jpg" alt="Máy xay ăn dặm 0.6L Bear QSJ-D02Q1 Bản 6 lưỡi" width="100%"></a> </div>
-                    <h2 class="product-name"><a href="may-xay-an-dam-06l-bear-qsjd02q1.html">Máy xay ăn dặm 0.6L Bear QSJ-D02Q1 Bản 6 lưỡi</a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>789,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">650,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-16%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="combo-3-noi-chao-cham-bear-25l-may-xay-bear-3-coi-grb03v1.html"><img src="../temp/uploaded-abc-ava_856020bf341af244ab0b%20%281%29_thumbcr_400x400.jpg" alt="Combo 3: Nồi 2.5l + máy xay 3 cối thủy tinh + Kèm quà tặng" width="100%"></a> </div>
-                    <h2 class="product-name"><a href="combo-3-noi-chao-cham-bear-25l-may-xay-bear-3-coi-grb03v1.html">Combo 3: Nồi 2.5l + máy xay 3 cối thủy tinh + Kèm quà tặng</a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>2,380,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">1,990,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-18%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="may-ham-sua-bear.html"><img src="../temp/uploaded-san-pham-Avatar%20tr%E1%BA%AFng%20chu%E1%BA%A9n_D12D1_thumbcr_400x400.jpg" alt="Máy đun hâm sữa đa năng Bear D12D1 " width="100%"></a> </div>
-                    <h2 class="product-name"><a href="may-ham-sua-bear.html">Máy đun hâm sữa đa năng Bear D12D1 </a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>999,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">819,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5 tab-cell-1-2 cell-pro-home">
-                    <div class='discount-tags'>-25%</div>
-                    <div style="overflow: hidden;"> <a class="grow" href="noi-nau-cham-da-nang-bear-ddzd16j3-16l-kem-long-hap-.html"><img src="../temp/uploaded-san-pham-AVATAR%20tr%E1%BA%AFng_1.6_thumbcr_400x400.jpg" alt="Nồi nấu cháo chậm Bear 1.6L" width="100%"></a> </div>
-                    <h2 class="product-name"><a href="noi-nau-cham-da-nang-bear-ddzd16j3-16l-kem-long-hap-.html">Nồi nấu cháo chậm Bear 1.6L</a></h2>
-                    <div class="c5"></div>
-                    <div style="float: left;">
-                        <div class="pricekm"><s>1,190,000 đ </s></div>
-                        <div class="c3"></div>
-                        <div class="price">890,000 đ</div>
-                    </div>
-                    <a class="viewmore" style="float: right;" href="">Đặt hàng <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                </div>
-                <div class="cell-1-5"></div>
-                <div class="cell-1-5"></div>
-                <div class="cell-1-5"></div>
+                @endforeach
+                @endif
+                
             </div>
             <div class="c10"></div>
         </div>

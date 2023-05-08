@@ -20,9 +20,9 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/grid.css')}}">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
-        <script src="js/jquery-1.10.1.min.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/script.js"></script>
+        <script src="{{ asset('js/jquery-1.10.1.min.js')}}"></script>
+        <script src="{{ asset('js/swiper.min.js')}}"></script>
+        <script src="{{ asset('js/script.js')}}"></script>
 
         
     </head>
@@ -200,18 +200,8 @@
             </ul>
         </nav>
         <link rel="stylesheet" href="css/widget-call.css">
-        <div class="widget_wbt_call_now_widget">
-            <div class="float-icon-hotline">
-                <ul>
-                    <li class="hotline_float_icon"><a id="messengerButton" href="tel:0348949926"><i class="fa fa-hotline animated infinite tada"></i><span>Hotline: 0348949926</span></a></li>
-                    <li class="hotline_float_icon"><a id="messengerButton" href="//zalo.me/0348949926" target="_blank"><i class="fa fa-zalo animated infinite tada"></i><span>Nhắn tin qua Zalo</span></a></li>
-                    <!--
-                        <li class="hotline_float_icon"><a id="messengerButton" href="https://m.me/" target="_blank"><i class="fa fa-messenger animated infinite tada"></i><span>Nhắn tin qua Facebook</span></a></li>
-                        -->
-                </ul>
-            </div>
-        </div>
-        <script type="text/javascript" src="js/300/addthis_widget.js#pubid=xa-522d562834f75590"></script>
+        
+        <script type="text/javascript" src="{{ asset('js/300/addthis_widget.js#pubid=xa-522d562834f75590')}}"></script>
     </body>
    
 </html>
