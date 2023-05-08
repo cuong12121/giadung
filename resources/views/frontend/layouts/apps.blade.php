@@ -3,7 +3,7 @@
     <head>
         <img width="99999" height="99999" style="pointer-events: none; position: absolute; top: 0; left: 0; width: 95vw; height: 99vh; max-width: 99vw; max-height: 99vh;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+">    
         <meta charset="utf-8">
-        <title>BEAR VIỆT NAM - ĐỒ GIA DỤNG BEAR CHÍNH HÃNG </title>
+        <title>Gia Dụng </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
         <meta http-equiv="Content-Language" content="VN">
         <meta name="description" content="Chúng tôi tự hào là đại lí bán đồ gia dụng Bear số 1 Việt Nam chuyên cung cấp tất cả các sản phẩm gia dụng Bear chính hãng đáp ứng mọi nhu cầu từ quý khách hàng">
