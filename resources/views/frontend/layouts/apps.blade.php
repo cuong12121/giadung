@@ -24,7 +24,7 @@
         <script src="js/swiper.min.js"></script>
         <script src="js/script.js"></script>
 
-        <a href="//www.dmca.com/Protection/Status.aspx?ID=eb03ce64-bb79-41cf-895b-a7e58529a464" title="DMCA.com Protection Status" class="dmca-badge"> <img src="Badges/dmca_protected_sml_120m.png?ID=eb03ce64-bb79-41cf-895b-a7e58529a464" alt="DMCA.com Protection Status"></a>  <script src="Badges/DMCABadgeHelper.min.js"> </script>
+        
     </head>
     <body>
 

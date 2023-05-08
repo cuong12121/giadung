@@ -280,9 +280,8 @@ class categoryController extends Controller
                     $page = !empty($_GET['page'])?$_GET['page']:1;
 
                    
-                    $limit = 12;
+                    $limit = 15;
 
-                   
                    
                     $data = product::whereIn('id', $Group_product)->where('active', 1)->orderBy('id', 'desc')->limit($limit)->offset(($page - 1) * $limit)->get();
 

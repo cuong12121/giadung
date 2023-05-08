@@ -2,17 +2,18 @@
 @extends('frontend.layouts.apps')
 @section('content')
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
  <div class="content" style="background:#FFF">
         <div class="img-poster" style="position:relative"></div>
         <div class="c"></div>
             <div class="grid">
-                <div class="crumb"><a href="../index.htm"><i class="fa fa-home"></i></a> <i class="fa fa-angle-right"></i> <a href='index.htm'>Mẹ và bé</a></div>
+                <div class="crumb"><a href="../index.htm"><i class="fa fa-home"></i></a> <i class="fa fa-angle-right"></i> <a href="{{ route('details', $link) }}">{{ $name_cate }}</a></div>
                 <div class="c5"></div>
             </div>
             <div class="c10"></div>
             <div class="grid">
-                <h1 class="title-page"><a>Mẹ và bé</a></h1>
+                <h1 class="title-page"><a>{{ $name_cate }}</a></h1>
                 <div class="c5"></div>
                
                 <div class="c20" style="border-bottom:solid 1px #CCC;"></div>
@@ -40,9 +41,31 @@
                     @endif
                 </div>
                 <div class="c10"></div>
-                <div class="paging">
-                    <div class='paging1'><a href='page-1/index.htm' class='page disabled'><strong> <i class='fa fa-angle-double-left'></i>  </strong></a><a href='page-1/index.htm' class='page disabled'><strong> <i class='fa fa-angle-left'></i> </strong></a><a class='clicked page'>&nbsp;1&nbsp;</a><a href='page-2/index.htm' class='page'>&nbsp;2&nbsp;</a> <a href='page-2/index.htm' class='page '><strong> <i class='fa fa-angle-right'></i> </strong></a> <a href='page-2/index.htm' class='page '><strong>  <i class='fa fa-angle-double-right'></i> </strong></a></div>
-                </div>
+                @if(\Request::route()->getName()!='search-product-frontend' && !empty($data))
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <?php 
+
+                            $limit =  floor(intval($numberdata)/15); 
+                        ?>
+                        @for($i=0; $i<=$limit; $i++)
+
+                        @if($page>5)
+                            @if($i<=$page+4 && $i>$page-6)
+                            <li class="page-item {{  $page==$i+1?'active':'' }} " ><a class="page-link" href="{{ route('details',$link) }}?page={{ $i+1 }}">{{ $i+1 }}</a></li>
+                            @endif
+                        @else
+                            @if($i<10)
+                            <li class="page-item {{  $page==$i+1?'active':'' }} " ><a class="page-link" href="{{ route('details',$link) }}?page={{ $i+1 }}">{{ $i+1 }}</a></li>
+                            @endif
+                        @endif
+                        @endfor
+                       
+                    </ul>
+                </nav>
+
+                @endif
                 <div class="c5"></div>
             </div>
         </div>
