@@ -728,7 +728,8 @@ class AjaxController extends Controller
        
         $result = Cart::remove($id);
 
-        return 1;
+       
+        return $result;
 
         // $data_cart = Cart::content();
 

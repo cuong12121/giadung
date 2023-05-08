@@ -23,6 +23,7 @@
         <script src="{{ asset('js/jquery-1.10.1.min.js')}}"></script>
         <script src="{{ asset('js/swiper.min.js')}}"></script>
         <script src="{{ asset('js/script.js')}}"></script>
+         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         
     </head>

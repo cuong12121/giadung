@@ -205,7 +205,7 @@
 
                                         <td valign="top" width="80" style="text-align: center;">
                                             <img src="{{ asset($infoProducts->Image) }}" width="50"> <br>
-                                            <a class="txt_999" href="javascript:" onclick="RemoveCart('{{ $data->rowId }}')">
+                                            <a class="txt_999" href="javascript:void(0)" onclick="RemoveCart('{{ $data->rowId }}')">
                                             <i class="fa fa-remove"></i>
                                             Xóa</a>
                                         </td>
@@ -390,6 +390,8 @@
 
             },
             success: function(result){
+
+               
 
               window.location.href = "{{ route('cart-tgtl') }}"; 
                 
