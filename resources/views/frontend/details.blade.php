@@ -17,7 +17,7 @@
     <div class="content" style="background:#FFF">
         <div class="c"></div>
         <div class="grid">
-            <div class="crumb"><a href="../index.htm"><i class="fa fa-home"></i></a> <i class="fa fa-angle-right"></i> <a href='index.htm'>Mẹ và bé</a></div>
+            <!-- <div class="crumb"><a href="../index.htm"><i class="fa fa-home"></i></a> <i class="fa fa-angle-right"></i> <a href='index.htm'>Mẹ và bé</a></div> -->
             <div class="c5"></div>
         </div>
         <div class="c10"></div>
@@ -108,7 +108,7 @@
                             
                             });
 
-                           
+
                         
                         ?>
 
@@ -294,7 +294,7 @@
                 <div class="cell-9-12 tab-cell-1-1">
                     <div class="item-detail-tab">
                         <div class="item-tab tab-active" rel="1"> Chi tiết sản phẩm </div>
-                        <div class="item-tab " rel="2"><span> Món ăn gợi ý </span></div>
+                        
                         <div class="c"></div>
                     </div>
                     <div class="c10" style="border-top:solid 1px #CCC"></div>
