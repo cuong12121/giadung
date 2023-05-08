@@ -112,6 +112,8 @@
                     speed: 500,
                     spaceBetween: 0,
                 });
+
+                
                 /*
                  $('#slide_home').on('mouseover', function () {
                  swiper_slide_home.autoplay.stop();
