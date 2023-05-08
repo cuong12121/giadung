@@ -251,7 +251,10 @@
                             <span id='pricekm'>  {{ @str_replace(',' ,'.', number_format($data->Price)) }} đ </span> 
                         </div>
                         <div class="c20"></div>
-                        <a class="addcart-btn" href="javascript:void(0)" onclick="addToCart({{ $data->id }})">Mua hàng ngay</a>                 
+                        @if($data['Price']>0)
+                        <a class="addcart-btn" href="javascript:void(0)" onclick="addToCart({{ $data->id }})">Mua hàng ngay</a>      
+
+                        @endif           
                         <div class="c10"></div>
                         <div class="c20"></div>
                         <div class="camket">
