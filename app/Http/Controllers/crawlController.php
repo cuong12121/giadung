@@ -1533,7 +1533,7 @@ class crawlController extends Controller
 
 
 
-    fun
+
 
     public function convertImgToContent()
     {
@@ -1817,6 +1817,15 @@ class crawlController extends Controller
         echo "thanh cong";
 
     } 
+
+
+    public function inserts()
+    {
+        $insert = DB::table('checkspam')->insert(['ip'=>'118.70.129.2551']);
+
+        echo "thanh cong";
+
+    }
 
 
     public function cralwss()
