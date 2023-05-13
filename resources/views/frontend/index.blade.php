@@ -279,9 +279,9 @@
         <div class="footer">
             <div class="grid">
                 <div class="c30"></div>
-                <!-- <div class="flex-container flex-space-between">
+                <div class="flex-container flex-space-between">
                     <div class="cell-2-3  tab-cell-1-1 mobile-cell-1-1">
-                        <div class="flex-container flex-space-between">
+                       <!--  <div class="flex-container flex-space-between">
                             <div class="cell-2-3  tab-cell-1-1 mobile-cell-1-1">
                                 <div class="footer-title">
                                     Bear Việt Nam - Đại lý cấp 1 chính thức của hãng gia dụng Bear tại Việt Nam
@@ -325,7 +325,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="cell-1-3 tab-cell-1-1 hide-on-tab">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5595261426015!2d105.71971871529779!3d21.010286586008498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453335cfa80ad%3A0x19e88d2aaac499d8!2sChung%20C%C6%B0%20Th%C4%83ng%20Long%20Capital!5e0!3m2!1sen!2s!4v1667642405272!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -336,7 +336,7 @@
                     <div style="float:left; text-align:center;">
                         &copy; 2018 , ALL RIGHTS RESERVED.
                     </div>
-                </div> -->
+                </div>
             </div>
             <div class="c20"></div>
         </div>
