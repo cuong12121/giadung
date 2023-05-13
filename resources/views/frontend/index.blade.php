@@ -28,7 +28,7 @@
             <div class="c20"></div>
             <div class="rtb-home hide-on-tab">
                 <div class="grid">
-                    <!-- <div class="flex-container flex-space-between">
+                    <div class="flex-container flex-space-between">
                         <div class="cell-1-4 tab-cell-1-2">
                             <div class="rtb-box">
                                 <div class="flex-container flex-space-between">
@@ -89,7 +89,7 @@
                                 <div class="c"></div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="c"></div>
             </div>
