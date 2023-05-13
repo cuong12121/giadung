@@ -200,10 +200,10 @@
                         </div> -->
                         <div class="c10"></div>
                         <!-- AddThis Button BEGIN -->
-                        <div class="addthis_toolbox addthis_default_style "> 
+                       <!--  <div class="addthis_toolbox addthis_default_style "> 
                             <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> 
                             <a class="addthis_counter addthis_pill_style"></a> 
-                        </div>
+                        </div> -->
                         <!-- AddThis Button END -->
                         <!--
                             <a class="addcart" href="/addcart/combo-noi-nau-chao-cham-may-xay-an-dam-bear.html" >Đặt hàng</a>
