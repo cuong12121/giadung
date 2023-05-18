@@ -6,13 +6,13 @@
         <title>Gia Dụng </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
         <meta http-equiv="Content-Language" content="VN">
-        <meta name="description" content="Chúng tôi tự hào là đại lí bán đồ gia dụng Bear số 1 Việt Nam chuyên cung cấp tất cả các sản phẩm gia dụng Bear chính hãng đáp ứng mọi nhu cầu từ quý khách hàng">
+        <meta name="description" content="">
         <meta name="keywords" content="">
         <meta property="og:url" name="og:url" content="https://bearvietnam.com.vn/" data-app="">
         <meta property="og:type" name="og:type" content="website" data-app="">
-        <meta property="og:description" name="og:description" content="Chúng tôi tự hào là đại lí bán đồ gia dụng Bear số 1 Việt Nam chuyên cung cấp tất cả các sản phẩm gia dụng Bear chính hãng đáp ứng mọi nhu cầu từ quý khách hàng" data-app="">
-        <meta property="og:title" name="og:title" content="BEAR VIỆT NAM - ĐỒ GIA DỤNG BEAR CHÍNH HÃNG " data-app="">
-        <meta property="og:image" name="og:image" content="https://bearvietnam.com.vn/uploaded/logo/logo.png" data-app="">
+        <meta property="og:description" name="og:description" content="" data-app="">
+        <meta property="og:title" name="og:title" content="Gia Dụng " data-app="">
+        <meta property="og:image" name="og:image" content="" data-app="">
         <link href="favicon.ico" rel="shortcut icon">
         <meta name="google-site-verification" content="iab7ppCh8CQx4bhanyoz0fN-ol-cDT4LogjVuqdO27o">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/swiper.min.css')}}">
