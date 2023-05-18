@@ -17,6 +17,11 @@
     .div-prododuct{
         padding: 0;
     }
+    .center-text{
+        text-align: center;
+        height: 20px;
+        width: 100%;
+    }
 
 </style>
 
@@ -50,7 +55,7 @@
                     </div>
                     <h3 class="product-name"><a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}">{{ $value->Name }}</a></h3>
                     <div class="c5"></div>
-                    <div style="float: left;">
+                    <div class="center-text">
                         <!-- <div class="pricekm"><s>1,490,000đ </s></div>
                         <div class="c3"></div> -->
                         <div class="price">{{ @str_replace(',' ,'.', number_format($value->Price)) }}đ</div>

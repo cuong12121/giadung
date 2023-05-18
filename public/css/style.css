@@ -1485,7 +1485,7 @@ a.close:hover {
 }
 
 .price{
-    float:left;
+/*    float:left;*/
     color:#f0940b;
     font-family: "Roboto-B"; font-weight: normal;
     font-size: 18px;
