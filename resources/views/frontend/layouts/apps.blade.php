@@ -134,7 +134,7 @@
                     </li>
                     @endforeach
 
-                    <li class="" style="background:url() center left no-repeat; "> <a href="{{ route('details', 'may-loc-nuoc') }}" class="">Máy lọc nước</a> </li>
+                    <li class="" style="background:url() center left no-repeat; "> <a href="{{ route('details', 'may-loc-nuoc') }}" class="">Máy lọc nước </a> </li>
                    
                 </ul>
             </div>
