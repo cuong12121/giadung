@@ -133,6 +133,8 @@
                     <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; "> <a href="{{ route('details', $value->link) }}" class="">{{ $value->name }}</a>
                     </li>
                     @endforeach
+
+                    <li class="" style="background:url() center left no-repeat; "> <a href="{{ route('details', 'may-loc-nuoc') }}" class="">Máy lọc nước</a> </li>
                    
                 </ul>
             </div>
