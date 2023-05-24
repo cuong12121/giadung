@@ -72,7 +72,7 @@
                     </div>
                     <div class="c2"></div>
                     <div class="hotline">
-                        Hotline: <a href="tel:0348949926">0348949926</a>
+                        Hotline: <a href="tel:0348949926">0912326577</a>
                     </div>
                 </div>
             </div>

@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v=8881288.8883.159">
     <link rel="stylesheet" href="{{ asset('css/customs.css') }}?v=245754.75.52928">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=vietnamese" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
     
     <!-- end header -->
@@ -20,9 +31,9 @@
             height: 133px;
         }
     </style>
-    <main class="bg-fff">
+    <main class="bg-fff container">
         <!-- Begin menu blog -->
-        <div class="menu_blog">
+        <!-- <div class="menu_blog">
             <ul class="dm_container">
                 <li>
                     <a href="/tu-van-tivi/">
@@ -88,7 +99,7 @@
                     </a>
                 </li>
             </ul>
-        </div>
+        </div> -->
 
 
         <!-- End menu blog -->

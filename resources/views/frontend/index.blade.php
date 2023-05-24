@@ -236,34 +236,24 @@
         <div class="c20"></div>
         <div class="news-home-wrapper">
             <div class="grid">
-                <h2 class="title-cat-home" style="text-align: left;"><a href="bep-bear/index.htm">Kinh nghiệm </a></h2>
+                <h2 class="title-cat-home" style="text-align: left;"><a href="javascript:void(0)">Kinh nghiệm </a></h2>
                 <div class="c20"></div>
                 <div class="flex-container flex-space-between">
+                    <?php
+                        $blog = App\Models\post::take(3)->Orderby('id', 'desc')->get();
+                    ?>
+                    @if(!empty($blog) && $blog->count()>0)
+                    @foreach($blog as $value)
                     <div class="cell-1-3 tab-cell-1-1" style="margin-bottom:20px;">
-                        <a href="bep-bear/10-cong-thuc-lam-sua-hat-don-gian-thom-ngon-bang-may.html"><img src="{{ asset('temp/-uploaded_s%E1%BB%AFa%20h%E1%BA%A1t%20%289%29_cr_480x315.jpg')}}" width="100%" alt="10+ công thức làm sữa hạt đơn giản, thơm ngon bằng máy"></a> 
+                        <a href="{{ route('details', $value->link) }}"><img src="{{ asset('temp/-uploaded_s%E1%BB%AFa%20h%E1%BA%A1t%20%289%29_cr_480x315.jpg')}}" width="100%" alt="{{ $value->title }}"></a> 
                         <div class="c10"></div>
-                        <h3 class="news-home-name"> <a href="bep-bear/10-cong-thuc-lam-sua-hat-don-gian-thom-ngon-bang-may.html">10+ công thức làm sữa hạt đơn giản, thơm ngon bằng máy</a> </h3>
+                        <h3 class="news-home-name"> <a href="{{ route('details', $value->link) }}">{{ $value->title }}</a> </h3>
                         <div class="c5"></div>
-                        <div class="news-home-intro text-line-4">Uống sữa hạt đang trở th&agrave;nh xu hướng được nhiều người quan t&acirc;m bởi nh&oacute;m dưỡng chất tuyệt vời gi&uacute;p n&acirc;ng cao sức khỏe, v&oacute;c d&aacute;ng v&agrave; l&agrave;m chậm qu&aacute; tr&igrave;nh l&atilde;o h&oacute;a ở phụ nữ. Tuy nhi&ecirc;n, mua sữa hạt ngo&agrave;i h&agrave;ng c&oacute; thể kh&ocirc;ng đảm bảo khiến bạn băn khoăn, vậy th&igrave; đừng bỏ qua b&agrave;i viết n&agrave;y nh&eacute;. Bear Việt Nam sẽ chia sẻ với bạn top những&nbsp;c&ocirc;ng thức l&agrave;m sữa hạt&nbsp;đơn giản tại nh&agrave; được y&ecirc;u th&iacute;ch nhất với những nguy&ecirc;n liệu dễ t&igrave;m. C&ugrave;ng theo d&otilde;i nh&eacute;!</div>
+                        <div class="news-home-intro text-line-4">{!!  _substrs( strip_tags($value->content), 230) !!}...</div>
                     </div>
-                    <div class="cell-1-3 tab-cell-1-1" style="margin-bottom:20px;">
-                        <a href="bep-bear/top-5-may-xay-sinh-to-bear-duoc-mua-nhieu-nhat-2021.html"><img src="{{ asset('temp/-uploaded-san-pham-May-xay-sinh-to-bear_may-xay-sinh-to-cam-tay-bear-llj-d04a1-2-binh-5_cr_480x315.jpg') }}" width="100%" alt="Top 5 máy xay sinh tố Bear được mua nhiều nhất 2023"></a> 
-                        <div class="c10"></div>
-                        <h3 class="news-home-name"> <a href="bep-bear/top-5-may-xay-sinh-to-bear-duoc-mua-nhieu-nhat-2021.html">Top 5 máy xay sinh tố Bear được mua nhiều nhất 2023</a> </h3>
-                        <div class="c5"></div>
-                        <div class="news-home-intro text-line-4">Ngo&agrave;i c&aacute;c d&ograve;ng m&aacute;y xay thịt hay m&aacute;y xay đa năng, m&aacute;y xay sinh tố cũng l&agrave; một những sản phẩm của Bear được người ti&ecirc;u d&ugrave;ng tin tưởng lựa chọn. H&atilde;ng đồ gia dụng th&ocirc;ng minh n&agrave;y đ&atilde; cho ra mắt nhiều d&ograve;ng m&aacute;y xay sinh tố kh&aacute;c nhau đ&aacute;p ứng từng nhu cầu của kh&aacute;ch h&agrave;ng. Dưới đ&acirc;y l&agrave; Top 5 m&aacute;y xay sinh tố Bear được mua nhiều nhất trong năm vừa qua.
-                            &nbsp;
-                        </div>
-                    </div>
-                    <div class="cell-1-3 tab-cell-1-1" style="margin-bottom:20px;">
-                        <a href="bep-bear/review-may-hut-chan-khong-bear-san-pham-tien-ich-hien-dai.html"><img src="{{ asset('temp/-uploaded-san-pham-May-hut-chan-khong-bear_t%E1%BA%A3i%20xu%E1%BB%91ng_cr_480x315.jpg')}}" width="100%" alt="Review máy hút chân không Bear - Sản phẩm tiện ích, hiện đại "></a> 
-                        <div class="c10"></div>
-                        <h3 class="news-home-name"> <a href="bep-bear/review-may-hut-chan-khong-bear-san-pham-tien-ich-hien-dai.html">Review máy hút chân không Bear - Sản phẩm tiện ích, hiện đại </a> </h3>
-                        <div class="c5"></div>
-                        <div class="news-home-intro text-line-4">Review m&aacute;y h&uacute;t ch&acirc;n kh&ocirc;ng Bear l&agrave; th&ocirc;ng tin được nhiều b&agrave; nội trợ gia đ&igrave;nh quan t&acirc;m, bởi đ&acirc;y l&agrave; một trong những d&ograve;ng sản phẩm tiện &iacute;ch, mang đến nhiều ưu điểm trong qu&aacute; tr&igrave;nh sử dụng. Gi&uacute;p c&aacute;c gia đ&igrave;nh dễ d&agrave;ng bảo quản thực phẩm l&acirc;u v&agrave; hiệu quả hơn. B&ecirc;n cạnh đ&oacute; thiết kế nhỏ gọn, dễ sử dụng ph&ugrave; hợp với nhiều đối tượng sử dụng. C&ugrave;ng theo d&otilde;i b&agrave;i viết n&agrave;y để c&oacute; th&ocirc;ng tin review chi tiết sản phẩm nh&eacute;.&nbsp;
-                            &nbsp;
-                        </div>
-                    </div>
+                    @endforeach
+                    @endif
+                    
                 </div>
                 <div class="c10"></div>
             </div>
