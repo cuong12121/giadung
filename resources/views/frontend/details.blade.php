@@ -120,7 +120,7 @@
 
                        
 
-                            <div class="swiper-slide"><a href="../uploaded/abc/ava/f8bc846590c0569e0fd1%20%281%29.jpg" onclick="return hs.expand(this)"><img src="{{ asset($image->image) }}" alt="Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng" width="100%"></a></div>
+                            <div class="swiper-slide"><a href="{{ asset($image->image) }}" onclick="return hs.expand(this)"><img src="{{ asset($image->image) }}" alt="Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng" width="100%"></a></div>
 
                         @endif    
 
