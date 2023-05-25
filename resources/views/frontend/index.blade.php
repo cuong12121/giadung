@@ -165,7 +165,7 @@
                     @foreach($household as $value)
                     <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
                         <div class='discount-tags'>-13%</div>
-                        <div style="overflow: hidden; border:solid 1px #EEE; position:relative;"> 
+                        <div style="overflow: hidden; border:solid 1px #EEE; position:relative; height: 248px;"> 
                             <a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}"><img src="{{ asset($value->Image)}}" alt="{{ $value->Name }}" width="100%"></a> 
                             <a class="cart-icon" href="{{ route('details', $value->Link) }}"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
                         </div>
