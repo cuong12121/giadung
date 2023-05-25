@@ -158,7 +158,7 @@
                     <div class="sub-cat">
                     </div>
                 </div>
-                <a class="view-more-home" href="noi-bear/index.htm">Xem tiếp <i class="fa fa-angle-right"></i></a>
+                <a class="view-more-home" href="{{ route('details', 'san-pham-gia-dung') }}">Xem tiếp <i class="fa fa-angle-right"></i></a>
                 <div class="c10"></div>
                 <div class="flex-container flex-space-between">
 
@@ -198,7 +198,7 @@
                     <div class="sub-cat">
                     </div>
                 </div>
-                <a class="view-more-home" href="noi-bear/index.htm">Xem tiếp <i class="fa fa-angle-right"></i></a>
+                <a class="view-more-home" href="{{ route('details', 'san-pham-nha-bep') }}">Xem tiếp <i class="fa fa-angle-right"></i></a>
                 <div class="c10"></div>
                 <div class="flex-container flex-space-between">
 
