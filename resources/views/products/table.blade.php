@@ -277,7 +277,7 @@
 
                         <a href="https://giadung.dienmaynguoiviet.com/admins/products/{{ $product->id }}/edit?seo={{ $product->id }}"
                            class='btn btn-default btn-xs'>
-                            <i class="fa fa-medium" aria-hidden="true"></i>
+                            <i class="fab fa-medium"></i>
                         </a>
 
                         {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
