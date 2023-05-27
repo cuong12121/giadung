@@ -270,11 +270,15 @@
 
                         
 
-                         <a href="{{ route('filter-property') }}?group-product={{ get_Group_Product($product->id)[0]??'' }}&productId={{ $product->id }}"
+                        <a href="{{ route('filter-property') }}?group-product={{ get_Group_Product($product->id)[0]??'' }}&productId={{ $product->id }}"
                            class='btn btn-default btn-xs'>
                             <i class="fa fa-filter"></i>
                         </a>
-                        
+
+                        <a href="https://giadung.dienmaynguoiviet.com/admins/products/{{ $product->id }}/edit?seo={{ $product->id }}"
+                           class='btn btn-default btn-xs'>
+                            <i class="fa fa-medium" aria-hidden="true"></i>
+                        </a>
 
                         {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>
