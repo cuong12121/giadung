@@ -1107,11 +1107,11 @@ class crawlController extends Controller
 
                 $file_headers = @get_headers($link_down);
 
-                $path   = str_replace('//', '/', public_path().'/'.$value->Image);
+               
 
                 if(!empty($file_headers[0]) && $file_headers[0] == 'HTTP/1.0 200 OK'){
 
-                    file_put_contents($path, file_get_contents($link_down));
+                    file_put_contents(public_path().$value->Image, file_get_contents($link_down));
 
                 }  
                 else{
