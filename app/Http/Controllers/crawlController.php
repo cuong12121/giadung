@@ -1083,6 +1083,49 @@ class crawlController extends Controller
     }
 
 
+    public function crawlImageDMNV()
+    {
+
+        $groupProduct = groupProduct::find(8);
+
+        $dataPD =  product::whereIn('id', json_decode($groupProduct->product_id))->get();
+
+        foreach ($dataPD as  $value) {
+
+            $link_down = 'https://dienmaynguoiviet.vn'.$value->Image;
+
+            $file_headers = @get_headers($link_down);
+
+            if( !empty($file_headers[0]) && $file_headers[0] == 'HTTP/1.0 200 OK'){
+
+                file_put_contents(public_path().'/'.$value->Image, file_get_contents($link_down));
+
+            }  
+            else{
+
+                $link_down = 'https://dienmaynguoiviet.vn/'.$value->Image;
+
+                $file_headers = @get_headers($link_down);
+
+                if( !empty($file_headers[0]) && $file_headers[0] == 'HTTP/1.0 200 OK'){
+
+                    file_put_contents(public_path().'/'.$value->Image, file_get_contents($link_down));
+
+                }  
+                else{
+
+                    print_r($link_down);
+                }
+               
+            }
+
+        }
+
+        echo "thanh cong";
+
+    }
+
+
     public function filterTech()
     {
         $maygiat = groupProduct::find(2)->product_id;
@@ -1099,7 +1142,7 @@ class crawlController extends Controller
 
         $filter = filter::find(17);
 
-         if(!empty($filter->value)){
+        if(!empty($filter->value)){
 
             $ar_kqs = json_decode($filter->value, true);
 

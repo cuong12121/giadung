@@ -29,6 +29,9 @@ Route::post('/check-unique-cate', 'productController@filterProduct')->name('chec
 Route::get('/random-deal', 'crawlController@randomOrderDeal');
 
 
+Route::get('get-pd-giadung', 'productController@getPDGiaDung');
+
+
 Route::get('/test', 'Frontend\categoryController@test');
 
 Route::get('/cart-details', 'Frontend\indexController@showCart');
@@ -133,6 +136,10 @@ Route::post('filter-search-client', 'Frontend\filterController@filter')->name('c
 Route::get('searchquery', 'productController@search')->name('test');
 
 Route::get('page/{slug}', 'Frontend\categoryController@pageView')->name('page_cd');
+
+
+
+Route::get('get-image-dmnv', 'crawlController@crawlImageDMNV');
 
 
 Route::get('tim', 'productController@FindbyNameOrModelOfFrontend')->name('search-product-frontend');

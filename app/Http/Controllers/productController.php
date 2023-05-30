@@ -695,6 +695,18 @@ class productController extends AppBaseController
 
     }
 
+    public function getPDGiaDung()
+    {
+        $gd  = groupProduct::find(8);
+        $product = product::whereIn('id', json_decode($gd->product_id))->get();
+
+        $i =0;
+        foreach ($product as  $value) {
+            $i++;
+            print_r($value->ProductSku.'<br>');
+        }
+    }
+
     public function deleteProduct($id)
     {
 
