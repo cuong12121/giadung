@@ -206,7 +206,7 @@
                     <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
                         <div class='discount-tags'>-13%</div>
                         <div style="overflow: hidden; border:solid 1px #EEE; position:relative;"> 
-                            <a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}"><img src="{{ asset($value->Image)}}" alt="Nồi nấu cháo chậm Bear 2,5l C25R6" width="100%"></a> 
+                            <a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}"><img src="{{ asset($value->Image)}}" alt="{{ $value->Name }}" width="100%"></a> 
                             <a class="cart-icon" href="{{ route('details', $value->Link) }}"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
                         </div>
                         <h3 class="product-name"><a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}">{{ $value->Name }}</a></h3>
