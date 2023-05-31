@@ -19,7 +19,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="slideshow-img">
-                        <img src="{{ asset('uploaded/logo/z3249170928229_cdf8dfc1203e6291e064bed64e93a7d0.jpg')}}" alt="slide 2" width="100%" loading="lazy" style="display:block">
+                        <img src="{{ asset('uploaded/logo/slider1.jpg')}}" alt="slide 2" width="100%" loading="lazy" style="display:block">
                     </div>
                     <div class="grid hide-on-tab hide-on-mobile" style="position:relative; display: none; ">
                         <div class="slide-home-item">
@@ -230,7 +230,7 @@
 
 
         <div class="grid hide-on-tab" style="min-height:300px;">
-            <img src="uploaded/banner-qc/bn_long_2.png" width="100%">
+            <img src="uploaded/banner-qc/slider2.png" width="100%">
         </div>
 
         <div class="c20"></div>
