@@ -230,7 +230,7 @@
 
 
         <div class="grid hide-on-tab" style="min-height:300px;">
-            <img src="uploaded/banner-qc/slider2.png" width="100%">
+            <img src="uploaded/banner-qc/slider2.jpg" width="100%">
         </div>
 
         <div class="c20"></div>
