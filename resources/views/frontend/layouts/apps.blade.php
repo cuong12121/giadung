@@ -19,7 +19,7 @@
         <meta http-equiv="Content-Language" content="VN">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <meta property="og:url" name="og:url" content="https://bearvietnam.com.vn/" data-app="">
+        
         <meta property="og:type" name="og:type" content="website" data-app="">
         <meta property="og:description" name="og:description" content="" data-app="">
         <meta property="og:title" name="og:title" content="Gia Dụng " data-app="">
@@ -55,7 +55,7 @@
                     <div class="c10"></div>
                     <div class="search-pc">
                         <form action="{{ route('search-product-frontend') }}" method="get" id="searchformtab">
-                            <input name="key" class="kw" placeholder="Tìm kiếm " type="text" required>
+                            <input name="key" class="kw" placeholder="Tìm kiếm " type="text" id="kws" required>
                             <a href="#" class="fa fa-search submit-search-pc" onclick="$('#searchformtab').submit();return false;"><img style="float: left;"></a>
                         </form>
                     </div>
@@ -217,6 +217,50 @@
         <link rel="stylesheet" href="css/widget-call.css">
         
         <script type="text/javascript" src="{{ asset('js/300/addthis_widget.js#pubid=xa-522d562834f75590')}}"></script>
+
+        <script>
+
+         $(function() {
+            $("#kws").autocomplete({
+
+                minLength: 2,
+                
+                source: function(request, response) {
+                    $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+
+
+                    });
+                    $.ajax({
+
+                        url: "{{  route('sugest-click')}}",
+                        type: "POST",
+                        data: {
+                            "_token": "{{ csrf_token() }}",
+                            product:$('#kws').val()
+                        },
+                        dataType: "json",
+                        success: function (data) {
+                            var items = data;
+
+                            response(items);
+
+                            $('#ui-id-1').html();
+
+                            $('#ui-id-1').html(data);
+                        
+                        }
+                    });
+                },
+                html:true,
+            });
+        });    
+
+
+         
+          </script>
     </body>
    
 </html>
