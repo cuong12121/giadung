@@ -170,7 +170,7 @@
                             <p condensed="" roboto="" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: ">
                                 <span style="font-size:16px;">
                                     <span style="line-height:2;">
-                                        <span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️</b>{{ $val }}</span>
+                                        <span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️</b>{!! $val !!}</span>
                                     </span>
                                 </span>
                             </p>
