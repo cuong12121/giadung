@@ -75,7 +75,10 @@
                 
                 <div class="cell-3-10">
                     <div class="c10"></div>
+
                     <div class="shopping-cart">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        &nbsp;
                         <div class="icon-cart">
                             <span class="item_in_cart countcarts">{{ $number_cart_home }}</span>
                         </div>
