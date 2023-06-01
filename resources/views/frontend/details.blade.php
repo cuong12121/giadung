@@ -12,7 +12,22 @@
     else{
         $status = 'Còn hàng';
     }
+
+    $tr = str_replace(['Đặc điểm nổi bật', 'Xem thêm', '</li>'], '', trim($data->Salient_Features));
+
+    $str =   strip_tags($tr, '<li>');
+
+    $ar_convert_salient_features = explode('<li>', $str);
+
+
     ?>
+
+    <style type="text/css">
+        
+        .special-detail ul li{
+            line-height: 50px;
+        }
+    </style>
 
     <div class="content" style="background:#FFF">
         <div class="c"></div>
@@ -44,52 +59,7 @@
                         }
                     });
             </script>
-            <script type="application/ld+json">
-                {
-                "@context": "https://schema.org/",
-                "@type": "Product",
-                "name": "Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng",
-                "image": "https://bearvietnam.com.vn/temp/uploaded-abc-ava_f8bc846590c0569e0fd1 (1)_thumbcr_800x800.jpg",
-                "description": "Combo ăm dặn 2: nồi nấu cháo chậm Bear 1.6L + máy xay ăn dặm Bear 0.6l HOT nhất 2022 của Bear Việt Nam. GIẢM giá 500k khi mua combo tại Bearvietnam.com.vn liên hệ ngay hotline: 0348949926",
-                "sku": "Combo2001",
-                "mpn": "Combo2",
-                "brand": {
-                "@type": "Thing",
-                "name": "Bear"
-                },
-                "review": {
-                "@type": "Review",
-                "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "4",
-                "bestRating": "5"
-                },
-                "author": {
-                "@type": "Person",
-                "name": "Administrator"
-                }
-                },
-                "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "210"
-                },
-                "offers": {
-                "@type": "AggregateOffer",
-                "url": "",
-                "availability": "https://schema.org/InStock",
-                "lowPrice": "2040000",
-                "highPrice": "2040000",
-                "offerCount": "999",
-                "priceCurrency": "VND",
-                "price": "2040000",
-                "seller": {
-                "@type": "Organization",
-                "name": "Bear"
-                }
-                }
-                }
-            </script>           
+           
             <div class="flex-container flex-space-between">
                 <div class="cell-4-12 tab-cell-1-1">
                     
@@ -192,12 +162,23 @@
                         </div>
                         <div class="c5"></div>
                         <div class="c10" style="border-top: solid 1px #EEE"></div>
-                       <!--  <div class="content-text pro-intro-detail">
-                            <p condensed="" roboto="" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: "><span style="font-size:16px;"><span style="line-height:2;"><span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️</b><strong style="box-sizing: border-box;">COMBO</strong>&nbsp;gồm: Nồi nấu chậm Bear 1.6L +&nbsp;m&aacute;y xay ăn dặm Bear 0.6L</span></span></span></p>
-                            <p condensed="" dir="ltr" roboto="" role="presentation" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: "><span style="font-size:16px;"><span style="line-height:2;"><span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️Dễ sử dụng:&nbsp;</b>T&iacute;ch hợp nhiều chức năng xay, nấu tự động; thao t&aacute;c sử dụng đơn giản</span></span></span></p>
-                            <p condensed="" dir="ltr" roboto="" role="presentation" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: "><span style="font-size:16px;"><span style="line-height:2;"><span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️Th&ocirc;ng minh:&nbsp;</b>Chế độ nấu, hấp, hầm c&aacute;ch thủy, giữ 100%&nbsp;gi&aacute; trị dinh dưỡng</span></span></span></p>
-                            <p condensed="" dir="ltr" roboto="" role="presentation" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: "><span style="font-size:16px;"><span style="line-height:2;"><span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️</b><strong style="box-sizing: border-box;">Tiện lợi:</strong><b style="box-sizing: border-box;">&nbsp;</b>Tiết kiệm thời gian, c&ocirc;ng sức nấu; tiết kiệm điện hiệu quả&nbsp;</span></span></span></p>
-                        </div> -->
+                       <div class="content-text pro-intro-detail">
+                            @if(isset($ar_convert_salient_features))
+                            @foreach($ar_convert_salient_features as $val)
+
+                            @if(!empty(trim($val)))
+                            <p condensed="" roboto="" style="box-sizing: border-box; margin: 0px 0px 15px; font-family: ">
+                                <span style="font-size:16px;">
+                                    <span style="line-height:2;">
+                                        <span style="font-family:arial,helvetica,sans-serif;"><b style="box-sizing: border-box;">✔️</b>{{ $val }}</span>
+                                    </span>
+                                </span>
+                            </p>
+                            @endif
+                            @endforeach
+                            @endif
+                        
+                        </div> 
                         <div class="c10"></div>
                         <!-- AddThis Button BEGIN -->
                        <!--  <div class="addthis_toolbox addthis_default_style "> 
