@@ -221,7 +221,7 @@
                 <div class="cell-3-12 tab-cell-1-1" style="    position: relative;">
                     <div class="fixed-right ">
                         <div class="product-detail-right">
-                            Thương hiệu: <strong> Bear </strong> Tình trạng: <strong> {{ $status }} </strong>
+                             Tình trạng: <strong> {{ $status }} </strong>
                         </div>
                         <div class="c10"></div>
                         <div class="c10"></div>
