@@ -13,7 +13,7 @@
         $status = 'Còn hàng';
     }
 
-    $tr = str_replace(['Đặc điểm nổi bật', 'Xem thêm', ' Xem th&ecirc;m','</li>'], '', trim($data->Salient_Features));
+    $tr = str_replace(['Đặc điểm nổi bật', 'Xem thêm', 'Xem th&ecirc;m','</li>'], '', trim($data->Salient_Features));
 
     $str =   strip_tags($tr, '<li>');
 
