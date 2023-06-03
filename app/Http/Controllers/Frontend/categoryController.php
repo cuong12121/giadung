@@ -596,7 +596,6 @@ class categoryController extends Controller
 
         $link = trim($slug);
 
-
         $link_redirect = redirectLink::where('request_path', '/'.$slug)->first();
 
 
@@ -696,10 +695,9 @@ class categoryController extends Controller
 
                 $data_cate = $group_product[0];
 
-            } 
+            }   
 
 
-              
 
 
             $data_group_product = Cache::rememberForever('data_group_product_'.$data_cate, function() use ($data_cate){ 
@@ -709,19 +707,36 @@ class categoryController extends Controller
                 return $data_group_products;
             });  
 
-            $other_product = Cache::rememberForever('other_product_'.$data_group_product->product_id, function() use ($data_group_product){ 
-
-                return product::whereIn('id',  json_decode($data_group_product->product_id))->take(10)->get();
-            });  
-            
-
-
+            $other_product =  $this->otherProduct($data->Name);
+           
             $meta = Cache::remember('metaseo-detail'.$data->Meta_id,100, function() use ($data){
                 return metaSeo::find($data->Meta_id);
             }); 
             
             return view('frontend.details', compact('data', 'images', 'other_product', 'meta', 'pageCheck', 'data_cate'));
         }
+    }
+
+    public function otherProduct($name)
+    {
+        $name =  trim($name);
+
+        $data_group = groupProduct::select('name')->whereIn('parent_id', [107, 100])->get();
+
+        $result = '';
+
+        foreach ($data_group as  $value) {
+            if(strpos($name, $value->name)!== false){
+
+                $result = $value->name;
+                
+            }
+        }
+
+        $product = Product::where('Name', 'like', '%'. $result. '%')->take(10)->get();
+
+        return $product;
+
     }
 
     public function addProductToCart()
