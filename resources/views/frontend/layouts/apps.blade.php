@@ -143,10 +143,13 @@
 
                         $menu = App\Models\groupProduct::select('link', 'name')->where('parent_id', 100)->get();
                     ?>
+                    @if(!empty($menu) && $menu->count()>0)
                     @foreach($menu as $value)
                     <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; "> <a href="{{ route('details', $value->link) }}" class="">{{ $value->name }}</a>
                     </li>
                     @endforeach
+
+                    @endif
 
                     <li class="" style="background:url() center left no-repeat; "> <a href="{{ route('details', 'may-loc-nuoc') }}" class="">Máy lọc nước </a> </li>
                    
