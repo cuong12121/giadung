@@ -144,7 +144,7 @@
     <div class="content" style="background:#FFF">
         <div class="c20 hide-on-tab"></div>
         <div class="grid hide-on-tab">
-            <img src="uploaded/banner-qc/bn_long.png" width="100%">
+            <img src="uploaded/banner-qc/bn_long.jpg" width="100%">
         </div>
         <div class="c10"></div>
         <div class="grid hide-on-tab hide-on-mobile">
