@@ -42,7 +42,7 @@
                 <div class="customfooter" style="padding-top: 50px; padding-bottom: 30px; padding-left: 35px;">
                     <div class="row row-small dark row-full-width">
                         <div class="cell-1-1-3 medium-12 small-12 col">
-                            <!-- <p class="title">Bear Việt Nam</p> -->
+                            <p class="title">Gia dụng gia đình</p> 
                             <a href="https://www.facebook.com/bearvietnam.vn" class="social" target="_blank">
                                 <img src="/wp-content/themes/shopping/images/fb.png" alt="Facebook" data-lazy-src="/wp-content/themes/shopping/images/fb.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/fb.png" alt="Facebook"></noscript>
@@ -58,13 +58,13 @@
                             <a href="https://www.youtube.com/@BearVietnam" class="social" target="_blank">
                                 <img src="/wp-content/themes/shopping/images/youtube.png" alt="Youtube" data-lazy-src="/wp-content/themes/shopping/images/youtube.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/youtube.png" alt="Youtube"></noscript>
-                            </a>
-                            <p><i class="fa fa-map-marker"></i>19 Nguyễn Trãi, Thanh Xuân, Hà Nội</p>
+                            </a> 
+                          <!--   <p><i class="fa fa-map-marker"></i>19 Nguyễn Trãi, Thanh Xuân, Hà Nội</p>
                             <p><i class="fa fa-phone"></i>1800.6161</p>
                             <p><i class="fa fa-envelope"></i>cskh@bearvietnam.vn</p>
                             <p>MST: 0108085048 – Ngày cấp: 06/12/2017</p>
                             <p>Nơi cấp: sở Kế hoạch và đầu tư TP. Hà Nội</p>
-                            <p>Đại Diện: Ông Lê Anh Tuấn – Chức vụ: Tổng Giám Đốc</p>
+                            <p>Đại Diện: Ông Lê Anh Tuấn – Chức vụ: Tổng Giám Đốc</p> -->
                         </div>
                         <div class="cell-1-1-3 medium-6 small-12 col">
                             <p class="title">Danh mục sản phẩm</p>
