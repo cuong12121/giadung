@@ -113,11 +113,11 @@
                 <div class="c20"></div>
             </div>
         </div>
-        <div class="copyright">
+        <!-- <div class="copyright">
             <div style="float:left; text-align:center;">
                 &copy; 2018 , ALL RIGHTS RESERVED.
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="c20"></div>
 </div>
