@@ -48,15 +48,15 @@
                                 <noscript><img src="/wp-content/themes/shopping/images/fb.png" alt="Facebook"></noscript>
                             </a>
                             <a href="#" class="social" target="_blank">
-                                <img src="/wp-content/themes/shopping/images/twitter.png" alt="Twitter" data-lazy-src="/wp-content/themes/shopping/images/twitter.png" data-ll-status="loaded" class="entered lazyloaded">
+                                <img src="https://bearvietnam.vn/wp-content/themes/shopping/images/twitter.png" alt="Twitter" data-lazy-src="/wp-content/themes/shopping/images/twitter.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/twitter.png" alt="Twitter"></noscript>
                             </a>
                             <a href="#" class="social" target="_blank">
-                                <img src="/wp-content/themes/shopping/images/insta.png" alt="Instagram" data-lazy-src="/wp-content/themes/shopping/images/insta.png" data-ll-status="loaded" class="entered lazyloaded">
+                                <img src="https://bearvietnam.vn/wp-content/themes/shopping/images/insta.png" alt="Instagram" data-lazy-src="/wp-content/themes/shopping/images/insta.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/insta.png" alt="Instagram"></noscript>
                             </a>
-                            <a href="https://www.youtube.com/@BearVietnam" class="social" target="_blank">
-                                <img src="/wp-content/themes/shopping/images/youtube.png" alt="Youtube" data-lazy-src="/wp-content/themes/shopping/images/youtube.png" data-ll-status="loaded" class="entered lazyloaded">
+                            <a href="#" class="social" target="_blank">
+                                <img src="https://bearvietnam.vn/wp-content/themes/shopping/images/youtube.png" alt="Youtube" data-lazy-src="/wp-content/themes/shopping/images/youtube.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/youtube.png" alt="Youtube"></noscript>
                             </a> 
                           <!--   <p><i class="fa fa-map-marker"></i>19 Nguyễn Trãi, Thanh Xuân, Hà Nội</p>
