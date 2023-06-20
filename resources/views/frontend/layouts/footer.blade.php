@@ -44,7 +44,7 @@
                         <div class="cell-1-1-3 medium-12 small-12 col">
                             <p class="title">Gia dụng gia đình</p> 
                             <a href="https://www.facebook.com/bearvietnam.vn" class="social" target="_blank">
-                                <img src="/wp-content/themes/shopping/images/fb.png" alt="Facebook" data-lazy-src="/wp-content/themes/shopping/images/fb.png" data-ll-status="loaded" class="entered lazyloaded">
+                                <img src="https://bearvietnam.vn/wp-content/themes/shopping/images/fb.png" alt="Facebook" data-lazy-src="/wp-content/themes/shopping/images/fb.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/fb.png" alt="Facebook"></noscript>
                             </a>
                             <a href="#" class="social" target="_blank">
