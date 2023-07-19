@@ -35,7 +35,16 @@
         <script src="{{ asset('js/jquery-1.10.1.min.js')}}"></script>
         <script src="{{ asset('js/swiper.min.js')}}"></script>
         <script src="{{ asset('js/script.js')}}"></script>
-         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <!-- test thư viện bootstrap -->
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
         
     </head>
@@ -135,7 +144,7 @@
     <div class="menubar">
         <div class="grid">
             <div class="flex-container flex-centered">
-                <ul class="nav  hide-on-tab hide-on-mobile">
+                <ul class="nav  hide-on-tab hide-on-mobile dropdown">
                     <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}" style="background:url() center left no-repeat; "> <a href="/" class="">Home </a>
                     </li>
 
@@ -144,9 +153,16 @@
                         $menu = App\Models\groupProduct::select('link', 'name')->where('parent_id', 100)->get();
                     ?>
                     @if(!empty($menu) && $menu->count()>0)
-                    @foreach($menu as $value)
-                    <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; "> <a href="{{ route('details', $value->link) }}" class="">{{ $value->name }}</a>
+                    @foreach($menu as $key=> $value)
+                    <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; " id="dropdownMenuButton_{{ $key }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <a href="{{ route('details', $value->link) }}" class="">{{ $value->name }}</a>
+
                     </li>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_{{ $key }}">
+                        <a class="dropdown-item" href="#">Action {{ $key }}</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                     @endforeach
 
                     @endif
