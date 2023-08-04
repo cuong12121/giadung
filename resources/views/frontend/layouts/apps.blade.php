@@ -164,7 +164,7 @@
                             ?>
                             @if($child_menu->count()>0)
                             @foreach($child_menu as $childmenus)
-                            <a class="dropdown-item" href="#">{{ @$childmenus->name }}</a>
+                            <a class="dropdown-item" href="{{ route('details', $childmenus->link) }}">{{ @$childmenus->name }}</a>
 
                             @endforeach
                             @endif
