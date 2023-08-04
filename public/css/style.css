@@ -197,7 +197,7 @@ img{
 .nav > li{
     list-style:none;
     display:inline-block;
-    position:relative;
+    position:relative !important;
     float:left;
     font-size: 18px;
     font-weight: normal;
@@ -216,10 +216,10 @@ img{
     text-transform: uppercase;
     font-weight: normal;
 }
-.nav > li:hover a{
+.nav > li:hover .parent_menu{
     color: #ffaa00;
 }
-.nav > li.active a{
+.nav > li.active .parent_menu{
     color: #ffaa00;
 }
 .nav li ul{

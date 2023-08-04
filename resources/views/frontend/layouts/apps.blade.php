@@ -27,7 +27,7 @@
         <link href="favicon.ico" rel="shortcut icon">
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/swiper.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=2">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=4">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/grid.css')}}">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -150,19 +150,29 @@
 
                     <?php 
 
-                        $menu = App\Models\groupProduct::select('link', 'name')->where('parent_id', 100)->get();
+                        $menu = App\Models\groupProduct::select('link', 'name', 'id')->where('parent_id', 100)->get();
                     ?>
                     @if(!empty($menu) && $menu->count()>0)
                     @foreach($menu as $key=> $value)
-                    <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; " id="dropdownMenuButton_{{ $key }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <a href="{{ route('details', $value->link) }}" class="">{{ $value->name }}</a>
+                    <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; "> 
+                        <a href="javascript:void(0)" onclick="showChildMenu('dropdownMenuButton_{{ $key }}')" class="parent_menu">{{ $value->name }}</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_{{ $key }}" id="dropdownMenuButton_{{ $key }}">
+
+                            <?php 
+
+                                $child_menu = App\Models\groupProduct::select('link', 'name')->where('parent_id', $value->id)->get();
+                            ?>
+                            @if($child_menu->count()>0)
+                            @foreach($child_menu as $childmenus)
+                            <a class="dropdown-item" href="#">{{ @$childmenus->name }}</a>
+
+                            @endforeach
+                            @endif
+                        </div>
 
                     </li>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_{{ $key }}">
-                        <a class="dropdown-item" href="#">Action {{ $key }}</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                    
                     @endforeach
 
                     @endif
@@ -242,7 +252,7 @@
 
         <script>
 
-         $(function() {
+        $(function() {
             $("#kws").autocomplete({
 
                 minLength: 2,
@@ -278,7 +288,26 @@
                 },
                 html:true,
             });
-        });    
+        });  
+
+        function showChildMenu(id) {
+
+            console.log(id);
+            
+            const div = $('#'+id);
+
+            $('.dropdown-menu').hide();
+
+            if(div.is(':visible')){
+
+                div.hide();
+            }
+            else{
+                div.show();
+            }
+        }
+
+
 
 
          
