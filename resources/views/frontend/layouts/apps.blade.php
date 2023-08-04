@@ -27,7 +27,7 @@
         <link href="favicon.ico" rel="shortcut icon">
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/swiper.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=4">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=5">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/grid.css')}}">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
