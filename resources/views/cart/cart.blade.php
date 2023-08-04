@@ -167,16 +167,8 @@
 
                     $arrPrice = [];
                     $key = 0;
-                    
-
                     $cart = Gloudemans\Shoppingcart\Facades\Cart::content();
-
-                    
-
                     $number_cart = count($cart);
-
-
-                   
                  ?>  
 
                 @if($number_cart>0)

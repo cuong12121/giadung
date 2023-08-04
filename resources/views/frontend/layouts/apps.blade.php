@@ -25,7 +25,7 @@
         <meta property="og:title" name="og:title" content="Gia Dụng " data-app="">
         <meta property="og:image" name="og:image" content="" data-app="">
         <link href="favicon.ico" rel="shortcut icon">
-        <meta name="google-site-verification" content="iab7ppCh8CQx4bhanyoz0fN-ol-cDT4LogjVuqdO27o">
+
         <link rel="stylesheet" type="text/css" href="{{ asset('css/swiper.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=2">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/grid.css')}}">
