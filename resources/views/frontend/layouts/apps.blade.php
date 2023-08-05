@@ -45,6 +45,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style type="text/css">
+            .item-cart .form-control, .cartItem, .title-cart-pro, .item-c-btn button{
+                font-size: 2rem !important;
+            }
+            .item-c-total{
+                font-size: 2rem !important;
+            }
+        </style>
 
         
     </head>
