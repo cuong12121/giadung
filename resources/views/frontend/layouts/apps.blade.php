@@ -317,13 +317,11 @@
 
             div.show();
 
-        }).mouseleave(function(){
+        })
+
+        $(".nav li").mouseleave(function(){
             
-            const id = $( this ).attr('data-id');
-
-            const div = $('#'+id);
-
-            div.hide();
+           $('.dropdown-menu').hide();
             
         });
 
