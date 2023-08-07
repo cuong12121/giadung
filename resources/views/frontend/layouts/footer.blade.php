@@ -113,11 +113,16 @@
                 <div class="c20"></div>
             </div>
         </div>
-        <!-- <div class="copyright">
-            <div style="float:left; text-align:center;">
-                &copy; 2018 , ALL RIGHTS RESERVED.
-            </div>
-        </div> -->
+       
     </div>
+    <div class="c20"></div>
+     <div class="footer-bottom" style="text-align: center;"> 
+            <div class="container"> 
+                <p> 
+                    <b>Địa chỉ: Ngõ 683 Đường Nguyễn Khoái, Quận Hoàng Mai, TP HN.
+                    </b> 
+                </p> 
+            </div> 
+        </div>
     <div class="c20"></div>
 </div>

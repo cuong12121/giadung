@@ -16,6 +16,77 @@
             position:relative; 
             height: 250px;
         }
+
+
+
+
+
+        .phone_hotline {
+            width: 100%;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .p_hotline_item {
+            width: 33.34%;
+            text-align: center;
+            position: relative;
+        }
+
+        .p_hotline_item span {
+            width: 45%;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: Arial,Tahoma,sans-serif;
+            font-size: 14px;
+            color: #333;
+            text-align: left;
+        }
+
+
+
+        .p_hotline_item .icon_purchase, .p_hotline_item .icon_security {
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .p_hotline .icon_security {
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            vertical-align: middle;
+            background-position: 99% .5%;
+        }
+
+        .p_hotline_item .icon_complain {
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            vertical-align: middle;
+            background-image: url(https://dienmaynguoiviet.vn/media/category/icon.png);
+            background-position: 95.5% 14.5%;
+        }
+
+        .p_hotline_item .icon_purchase {
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            vertical-align: middle;
+            background-image: url(https://dienmaynguoiviet.vn/media/category/icon.png);
+            background-position: 81.5% 14.5%;
+        }
+
+        .p_hotline_item .icon_security {
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            vertical-align: middle;
+            background-image: url(https://dienmaynguoiviet.vn/media/category/icon.png);
+            background-position: 99% .5%;
+        }
     </style>
 
     <div>
@@ -268,6 +339,32 @@
                 <a class="dangkydichvu" href="">Liên hệ <b> tư vấn </b> </a>
                 -->
         </div>
+
+        <div class="max-width">
+            <div class="grid">
+                <div class="phone_hotline"> 
+                    <a href="tel:0243.687.9145" title="Bảo Hành: 0243.687.9145" class="p_hotline_item"> 
+                    <i class="icon_security"></i> 
+                        <span>
+                            <strong>Bảo Hành: 0243.687.9145</strong> (8h00 - 17h00)
+                        </span> 
+                    </a> 
+                    <a href="tel:0247.303.6336" title="Mua hàng: 0247.303.6336" class="p_hotline_item"> 
+                        <i class="icon_purchase"></i> 
+                        <span>
+                            <strong>Mua hàng: 0247.303.6336</strong> (8h00 - 17h00)
+                        </span> 
+                    </a> 
+                    <a href="tel:0916917949" title="Khiếu nại:0916917949" class="p_hotline_item"> <i class="icon_complain"></i> 
+                        <span>
+                            <strong>Khiếu nại: 091.691.7949</strong> (8h00 - 17h00)
+                        </span> 
+                    </a> 
+                </div>
+            </div>
+            
+        </div>
+
         <div class="c20"></div>
         <div class="c20" style="border-bottom: solid 1px #DDD"></div>
         <div class="c20"></div>
