@@ -121,7 +121,7 @@
                 <a href="#" class="show-search-mobile"> <i class="fa fa-search"></i> </a>
             </div>
             <div class="cell-4-10" style="position:relative;">
-                <div class="logo-mobile"> <a href="../index.htm"> <img src="../uploaded/logo/logo-mobile.png">  </a> </div>
+                <div class="logo-mobile"> </div>
             </div>
             <div class="cell-3-10">
                 <div class="c5"></div>
