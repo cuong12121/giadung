@@ -236,22 +236,13 @@
         </script>
         <nav id="menu">
             <ul>
-                <li><a href="index.htm">Home</a>
+                @if(!empty($menu) && $menu->count()>0)
+                @foreach($menu as $key=> $value)
+                <li><a href="{{ route('details', $value->link) }}">{{ $value->name }}</a>
                 </li>
-                <li><a href="gioi-thieu/index.htm">Giới thiệu</a>
-                </li>
-                <li><a href="noi-bear/index.htm">Mẹ và bé</a>
-                </li>
-                <li><a href="may-xay-bear/index.htm">Đồ dùng nhà bếp</a>
-                </li>
-                <li><a href="do-gia-dung-bear/index.htm">Sản phẩm HOT</a>
-                </li>
-                <li><a href="bep-bear/index.htm">Kinh nghiệm </a>
-                </li>
-                <li><a href="he-thong-chi-nhanh/index.htm">Chính sách đại lý</a>
-                </li>
-                <li><a href="videos/index.htm">Videos</a>
-                </li>
+                @endforeach
+                @endif
+                
             </ul>
         </nav>
         <link rel="stylesheet" href="css/widget-call.css">
