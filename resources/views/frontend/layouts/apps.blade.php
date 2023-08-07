@@ -163,7 +163,7 @@
                     @if(!empty($menu) && $menu->count()>0)
                     @foreach($menu as $key=> $value)
                     <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; "> 
-                        <a href="javascript:void(0)" onclick="showChildMenu('dropdownMenuButton_{{ $key }}')" class="parent_menu">{{ $value->name }}</a>
+                        <a href="{{ route('details', $value->link??'') }}"  class="parent_menu" data-id="dropdownMenuButton_{{ $key }}">{{ $value->name }}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_{{ $key }}" id="dropdownMenuButton_{{ $key }}">
 
                             <?php 
@@ -305,6 +305,27 @@
                 div.show();
             }
         }
+
+        $(".parent_menu").mouseenter(function(){
+
+
+            const id = $( this ).attr('data-id');
+
+            const div = $('#'+id);
+
+            $('.dropdown-menu').hide();
+
+            div.show();
+
+        }).mouseleave(function(){
+            
+            const id = $( this ).attr('data-id');
+
+            const div = $('#'+id);
+
+            div.hide();
+            
+        });
 
 
 
