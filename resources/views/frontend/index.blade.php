@@ -355,7 +355,7 @@
                     <a href="tel:0247.303.6336" title="Mua hàng: 0247.303.6336" class="p_hotline_item"> 
                         <i class="icon_purchase"></i> 
                         <span>
-                            <strong>Mua hàng: 0247.303.6336</strong> 
+                            <strong>Mua hàng: 098.361.2626</strong> 
                             <br>
                             (8h00 - 17h00)
                         </span> 
