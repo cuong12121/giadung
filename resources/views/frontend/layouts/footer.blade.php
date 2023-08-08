@@ -39,10 +39,9 @@
 
 <div class="footer">
     <div class="grid">
-        <div class="c30"></div>
         <div class="">
             <div class="cell-2-3  tab-cell-1-1 mobile-cell-1-1">
-                <div class="customfooter" style="padding-top: 50px; padding-bottom: 30px; padding-left: 35px;">
+                <div class="customfooter" style="padding-top: 25px; padding-bottom: 30px; padding-left: 35px;">
                     <div class="row row-small dark row-full-width">
                         <div class="cell-1-1-3 medium-12 small-12 col">
                             <p class="title">Gia dụng gia đình</p> 
