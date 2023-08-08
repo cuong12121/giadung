@@ -32,10 +32,13 @@
     .tab-map{
         margin-top:60px;
     }
+    .alight{
+        text-align: right;
+    }
 </style>
 
 <div class="footer">
-    <div class="">
+    <div class="grid">
         <div class="c30"></div>
         <div class="">
             <div class="cell-2-3  tab-cell-1-1 mobile-cell-1-1">
@@ -43,19 +46,19 @@
                     <div class="row row-small dark row-full-width">
                         <div class="cell-1-1-3 medium-12 small-12 col">
                             <p class="title">Gia dụng gia đình</p> 
-                            <a href="https://www.facebook.com/bearvietnam.vn" class="social" target="_blank">
+                            <a href="javascript:void(0)" class="social" target="_blank">
                                 <img src="https://bearvietnam.vn/wp-content/themes/shopping/images/fb.png" alt="Facebook" data-lazy-src="/wp-content/themes/shopping/images/fb.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/fb.png" alt="Facebook"></noscript>
                             </a>
-                            <a href="#" class="social" target="_blank">
+                            <a href="javascript:void(0)" class="social" target="_blank">
                                 <img src="https://bearvietnam.vn/wp-content/themes/shopping/images/twitter.png" alt="Twitter" data-lazy-src="/wp-content/themes/shopping/images/twitter.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/twitter.png" alt="Twitter"></noscript>
                             </a>
-                            <a href="#" class="social" target="_blank">
+                            <a href="javascript:void(0)" class="social" target="_blank">
                                 <img src="https://bearvietnam.vn/wp-content/themes/shopping/images/insta.png" alt="Instagram" data-lazy-src="/wp-content/themes/shopping/images/insta.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/insta.png" alt="Instagram"></noscript>
                             </a>
-                            <a href="#" class="social" target="_blank">
+                            <a href="javascript:void(0)" class="social" target="_blank">
                                 <img src="https://bearvietnam.vn/wp-content/themes/shopping/images/youtube.png" alt="Youtube" data-lazy-src="/wp-content/themes/shopping/images/youtube.png" data-ll-status="loaded" class="entered lazyloaded">
                                 <noscript><img src="/wp-content/themes/shopping/images/youtube.png" alt="Youtube"></noscript>
                             </a> 
@@ -108,8 +111,8 @@
                     </div>
                 </div>
             </div>
-            <div class="cell-1-3 tab-cell-1-1 hide-on-tab tab-map">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.9385871785303!2d105.89182860249123!3d20.99509873491041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aeb6d3414e2b%3A0x660cb995e3acdb25!2zNjgzIE5ndXnhu4VuIEtob8OhaSwgVGhhbmggVHLDrCwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1687145589324!5m2!1svi!2s" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="cell-1-3 tab-cell-1-1 hide-on-tab tab-map alight">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.9385871785303!2d105.89182860249123!3d20.99509873491041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aeb6d3414e2b%3A0x660cb995e3acdb25!2zNjgzIE5ndXnhu4VuIEtob8OhaSwgVGhhbmggVHLDrCwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1687145589324!5m2!1svi!2s" width="225" height="125" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class="c20"></div>
             </div>
         </div>
