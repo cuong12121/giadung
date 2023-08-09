@@ -19,6 +19,7 @@
         <meta http-equiv="Content-Language" content="VN">
         <meta name="description" content="">
         <meta name="keywords" content="">
+        <meta name="google-site-verification" content="hEXEIIUEWRNJmlTbvJZXlRLAxCygVXhctyKMwNI7WGU" />
         
         <meta property="og:type" name="og:type" content="website" data-app="">
         <meta property="og:description" name="og:description" content="" data-app="">
