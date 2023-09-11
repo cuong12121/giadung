@@ -13,6 +13,7 @@
 
 
 
+Route::get('crawl-data', 'crawlController@crawlDataGiadung');
 
 Route::get('/tin-khuyen-mai/', 'Frontend\blogController@index')->middleware('cache.headers:public;max_age=14400;etag')->name('tin');
 
@@ -28,9 +29,7 @@ Route::post('/check-unique-cate', 'productController@filterProduct')->name('chec
 
 Route::get('/random-deal', 'crawlController@randomOrderDeal');
 
-
 Route::get('get-pd-giadung', 'productController@getPDGiaDung');
-
 
 Route::get('/test', 'Frontend\categoryController@test');
 

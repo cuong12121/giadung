@@ -31,6 +31,278 @@ use \Carbon\Carbon;
 
 class crawlController extends Controller
 {
+
+    public function crawlDataGiadung()
+    {
+
+        $code ='https://nagakawa.com.vn/noi-com-dien-1-8l-nagakawa-nag0143
+        https://nagakawa.com.vn/noi-com-dien-1-8l-nagakawa-nag0143
+        https://nagakawa.com.vn/noi-com-dien-1-8l-nagakawa-nag0144
+        https://nagakawa.com.vn/noi-com-dien-1-8l-nagakawa-nag0144
+        https://nagakawa.com.vn/noi-com-dien-1-2l-nagakawa-nag0131
+        https://nagakawa.com.vn/noi-com-dien-1-8l-nagakawa-nag0133
+        https://nagakawa.com.vn/noi-com-dien-1l-nagakawa-nag0134
+        https://nagakawa.com.vn/noi-com-dien-1l-nagakawa-nag0134
+        https://nagakawa.com.vn/noi-com-dien-tu-1-8l-nagakawa-nag0135
+        https://nagakawa.com.vn/noi-com-dien-tu-1-2l-nagakawa-nag0136
+        https://nagakawa.com.vn/noi-com-dien-tu-1-2l-nagakawa-nag0136
+        https://nagakawa.com.vn/noi-com-dien-tu-1-5l-nagakawa-nag0142
+        https://nagakawa.com.vn/noi-com-dien-tu-1-5l-nagakawa-nag0142
+        https://nagakawa.com.vn/noi-com-dien-cao-tan-nagakawa-nag0139
+        https://nagakawa.com.vn/noi-com-dien-cao-tan-1-2l-nagakawa-nag0140
+        https://nagakawa.com.vn/noi-ap-suat-dien-6l-nagakawa-nag0205
+        https://nagakawa.com.vn/noi-ap-suat-dien-6l-nagakawa-nag0206
+        https://nagakawa.com.vn/am-sieu-toc-nag0314
+        https://nagakawa.com.vn/am-sieu-toc-nag0315
+        https://nagakawa.com.vn/am-sieu-toc-nag0315
+        https://nagakawa.com.vn/am-sieu-toc-nag0315
+        https://nagakawa.com.vn/am-sieu-toc-da-nang-nagakawa-nag0316
+        https://nagakawa.com.vn/am-sieu-toc-thuy-tinh-1-7l-nagakawa-nag0317
+        https://nagakawa.com.vn/am-sieu-toc-thuy-tinh-1-7l-nagakawa-nag0318
+        https://nagakawa.com.vn/am-sieu-toc-1-8l-nagakawa-nag0319
+        https://nagakawa.com.vn/am-sieu-toc-1-8l-nagakawa-nag0320
+        https://nagakawa.com.vn/am-sieu-toc-1-8l-nagakawa-nag0321
+        https://nagakawa.com.vn/am-sieu-toc-1-8l-nagakawa-nag0321
+        https://nagakawa.com.vn/am-sieu-toc-1-8l-nagakawa-nag0308
+        https://nagakawa.com.vn/may-say-toc-nagakawa-nag1606
+        https://nagakawa.com.vn/may-say-toc-nagakawa-nag1604
+        https://nagakawa.com.vn/ban-la-hoi-nuoc-nagakawa-nag1505
+        https://nagakawa.com.vn/ban-la-kho-nagakawa-nag1502
+        https://nagakawa.com.vn/binh-thuy-dien-4-lit-nagakawa-nag0404
+        https://nagakawa.com.vn/binh-thuy-dien-5l-nagakawa-nag0405
+        https://nagakawa.com.vn/bep-tu-nagakawa-nag0704
+        https://nagakawa.com.vn/bep-dien-tu-nagakawa-nag0712
+        https://nagakawa.com.vn/bep-dien-tu-cam-ung-nagakawa-nag0713-tang-kem-noi-lau-inox-cao-cap-bao-hanh-12-thang
+        https://nagakawa.com.vn/bep-dien-tu-cam-ung-nagakawa-nag0714
+        https://nagakawa.com.vn/bep-dien-tu-cam-ung-nagakawa-nag0715
+        https://nagakawa.com.vn/bep-dien-tu-da-nang-nagakawa-nag0716
+        https://nagakawa.com.vn/bep-dien-tu-da-nang-nagakawa-nag0717
+        https://nagakawa.com.vn/may-xay-thit-nagakawa-nag0812
+        https://nagakawa.com.vn/may-xay-thit-da-nang-nagakawa-nag0822
+        https://nagakawa.com.vn/may-xay-thit-da-nang-nagakawa-nag0823
+        https://nagakawa.com.vn/may-xay-sinh-to-nagakawa-nag0816
+        https://nagakawa.com.vn/may-xay-sinh-to-nagakawa-nag0819
+        https://nagakawa.com.vn/may-xay-sinh-to-nagakawa-nag0820
+        https://nagakawa.com.vn/may-lam-sua-hat-da-nang-nag0815
+        https://nagakawa.com.vn/may-lam-sua-hat-da-nang-nagakawa-nag0824
+        https://nagakawa.com.vn/may-ep-cham-nag0817
+        https://nagakawa.com.vn/may-ep-cham-nagakawa-nag0818
+        https://nagakawa.com.vn/may-lam-sua-hat-da-nang-nagakawa-nag0825
+        https://nagakawa.com.vn/may-vat-cam-dien-nag0814-0-75l
+        https://nagakawa.com.vn/may-xay-sinh-to-cam-tay-nagakawa-nag0826
+        https://nagakawa.com.vn/may-xay-sinh-to-cam-tay-nagakawa-nag0826
+        https://nagakawa.com.vn/lau-dien-nagakawa-nag1902
+        https://nagakawa.com.vn/lau-dien-nagakawa-nag1904
+        https://nagakawa.com.vn/lau-dien-nagakawa-nag1905
+        https://nagakawa.com.vn/lau-dien-nagakawa-nag1906
+        https://nagakawa.com.vn/bep-nuong-dien-nagakawa-nag3101
+        https://nagakawa.com.vn/bep-nuong-dien-2-mat-nagakawa-nag3102
+        https://nagakawa.com.vn/bep-nuong-dien-nagakawa-nag3103
+        https://nagakawa.com.vn/bep-lau-nuong-dien-nagakawa-nag3104
+        https://nagakawa.com.vn/noi-chien-khong-dau-6l-nagakawa-nag3301
+        https://nagakawa.com.vn/noi-chien-khong-dau-9l-nagakawa-nag3302
+        https://nagakawa.com.vn/noi-chien-khong-dau-nagakawa-nag3303
+        https://nagakawa.com.vn/noi-chien-khong-dau-12l-nagakawa-nag3304
+        https://nagakawa.com.vn/noi-chien-khong-dau-12l-nagakawa-nag3306
+        https://nagakawa.com.vn/noi-chien-khong-dau-12l-nagakawa-nag3307
+        https://nagakawa.com.vn/noi-chien-khong-dau-16l-nagakawa-nag3308
+        https://nagakawa.com.vn/noi-chien-khong-dau-24l-nagakawa-nag3309
+        https://nagakawa.com.vn/noi-hap-da-nang-nagakawa-nag3310
+        https://nagakawa.com.vn/bo-noi-day-tu-cao-cap-nagakawa-nag1353
+        https://nagakawa.com.vn/bo-noi-inox-nagakawa-haru-nag1355
+        https://nagakawa.com.vn/bo-noi-inox-nagakawa-natsu-nag1356
+        https://nagakawa.com.vn/noi-inox-304-da-day-can-dai-nag1358-16
+        https://nagakawa.com.vn/noi-inox-304-da-day-nag1358-20
+        https://nagakawa.com.vn/noi-inox-304-da-day-nag1358-24
+        https://nagakawa.com.vn/chao-inox-304-day-tu-nag1358-24p
+        https://nagakawa.com.vn/bo-noi-inox-nagakawa-nag1302
+        https://nagakawa.com.vn/bo-noi-inox-nagakawa-nag1351
+        https://nagakawa.com.vn/bo-noi-inox-nag1352
+        https://nagakawa.com.vn/bo-noi-inox-nagakawa-aki-nag1357
+        https://nagakawa.com.vn/bo-noi-inox-nagakawa-fuyu-nag1354
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-haru-nag2202
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-haru-nag2402
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-haru-nag2602
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-haru-nag2802
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-haru-nag3002
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-natsu-nag2203
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-natsu-nag2403
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-natsu-nag2603
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-natsu-nag2803
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-natsu-nag3003
+        https://nagakawa.com.vn/chao-chong-dinh-day-tu-nagakawa-nag2854
+        https://nagakawa.com.vn/chao-chong-dinh-day-tu-nagakawa-nag3054
+        https://nagakawa.com.vn/chao-chong-dinh-day-tu-nagakawa-nag2001
+        https://nagakawa.com.vn/chao-chong-dinh-day-tu-nagakawa-nag2201
+        https://nagakawa.com.vn/chao-van-da-day-tu-nagakawa-nag2206
+        https://nagakawa.com.vn/chao-van-da-day-tu-nagakawa-nag2406
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-aki-nag2604
+        https://nagakawa.com.vn/chao-van-da-day-tu-nagakawa-nag2806
+        https://nagakawa.com.vn/chao-van-da-day-tu-nagakawa-nag3006
+        https://nagakawa.com.vn/chao-kim-cuong-day-tu-nagakawa-nag2451
+        https://nagakawa.com.vn/cuong-day-tu-nagakawa-nag2651
+        https://nagakawa.com.vn/chao-kim-cuong-day-tu-nagakawa-nag2851
+        https://nagakawa.com.vn/chao-kim-cuong-day-tu-nagakawa-nag2852
+        https://nagakawa.com.vn/chao-kim-cuong-day-tu-nagakawa-nag2653
+        https://nagakawa.com.vn/chao-kim-cuong-day-tu-nag2853
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-aki-nag2404
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-aki-nag2604
+        https://nagakawa.com.vn/chao-inox-chong-dinh-nagakawa-aki-nag2804
+        https://nagakawa.com.vn/chao-chong-dinh-nagakawa-fuyu-nag2205
+        https://nagakawa.com.vn/chao-chong-dinh-nagakawa-fuyu-nag2405
+        https://nagakawa.com.vn/chao-chong-dinh-nagakawa-fuyu-nag2605
+        https://nagakawa.com.vn/chao-chong-dinh-nagakawa-fuyu-nag2805
+        https://nagakawa.com.vn/noi-ap-suat-nagakawa-nag1441
+        https://nagakawa.com.vn/noi-ap-suat-nagakawa-nag1451
+        https://nagakawa.com.vn/noi-ap-suat-nagakawa-nag1471
+        https://nagakawa.com.vn/noi-ap-suat-nagakawa-nag1472
+        https://nagakawa.com.vn/noi-ap-suat-nagakawa-nag1473
+        https://nagakawa.com.vn/noi-ap-suat-nagakawa-nag1481
+        https://nagakawa.com.vn/cay-nuoc-nong-lanh-nagakawa-nag1106
+        https://nagakawa.com.vn/cay-nuoc-nong-lanh-nagakawa-nag1107
+        https://nagakawa.com.vn/may-loc-khong-khi-nagakawa-nag3502m
+        https://nagakawa.com.vn/may-lam-mat-nagakawa-nfc555
+        https://nagakawa.com.vn/may-khu-khuan-nag3901-1
+        https://nagakawa.com.vn/may-khu-khuan-thuc-pham-nagakawa-nag3904
+        https://nagakawa.com.vn/may-khu-khuan-thuc-pham-nagakawa-nag3905-1
+        https://nagakawa.com.vn/may-khu-khuan-thuc-pham-nagakawa-nag3906
+        https://nagakawa.com.vn/bep-doi-dien-tu-inverter-cao-cap-nagakawa-nag1202m
+        https://nagakawa.com.vn/bep-doi-1-dien-tu-1-hong-ngoai-nagakawa-nag1252m
+        https://nagakawa.com.vn/bep-ba-2-dien-tu-1-hong-ngoai-nagakawa-nag1253m
+        https://nagakawa.com.vn/ep-doi-dien-tu-nagakawa-nag1214m
+        https://nagakawa.com.vn/bep-doi-dien-tu-inverter-nagakawa-nag1215m-mat-kinh-schott-ceran-cao-cap-bao-hanh-5-nam
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-nk2c01m
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-nk2c02m
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-nk2c03m
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-nk2c05mb
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-nk2c06ms
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-nk2c08ms
+        https://nagakawa.com.vn/bep-dien-tu-thong-minh-nagakawa-nk3c05msf
+        https://nagakawa.com.vn/bep-doi-dien-tu-cao-cap-nagakawa-nk2c15mb
+        https://nagakawa.com.vn/bep-doi-dien-tu-nk2c09ms
+        https://nagakawa.com.vn/bep-ba-lo-dien-tu-nagakawa-nk3c01m
+        https://nagakawa.com.vn/bep-3-lo-dien-tu-nk3c02ms
+        https://nagakawa.com.vn/bep-ba-2-dien-tu-1-hong-ngoai-nk3f01m
+        https://nagakawa.com.vn/bep-doi-dien-tu-nk2c11me
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-ultraslim-nk2c21m
+        https://nagakawa.com.vn/bep-3-lo-dien-tu-nagakawa-ultraslim-nk3c06m
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-ultraslim-nk2c22mb
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-ultraslim-nk2c25m
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-ultraslim-nk2c26mb
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-ultraslim-nk2c28m
+        https://nagakawa.com.vn/bep-doi-dien-tu-nagakawa-ultraslim-nk2c29mb
+        https://nagakawa.com.vn/bep-3-lo-dien-tu-nagakawa-ultraslim-nk3c08mb
+        https://nagakawa.com.vn/may-hut-mui-nagakawa-nag1854-70vm
+        https://nagakawa.com.vn/may-hut-mui-nagakawa-nag1855-70cm
+        https://nagakawa.com.vn/may-hut-mui-nagakawa-nag1853-70cm
+        https://nagakawa.com.vn/may-hut-mui-nagakawa-nag1857-70cm
+        https://nagakawa.com.vn/may-hut-mui-cao-cap-nagakawa-nkch02m70
+        https://nagakawa.com.vn/may-hut-mui-cao-cap-nagakawa-nkch02m70
+        https://nagakawa.com.vn/may-hut-mui-nagakawa-nkth02m70
+        https://nagakawa.com.vn/may-hut-mui-cao-cap-nagakawa-nkth03m70
+        https://nagakawa.com.vn/may-hut-mui-kinh-cong-nkch05m70
+        https://nagakawa.com.vn/may-hut-mui-cao-cap-nagakawa-nkch08m70
+        https://nagakawa.com.vn/may-hut-mui-cao-cap-nagakawa-nkch03m70-1
+        https://nagakawa.com.vn/may-hut-mui-nagakawa-nkch06m70
+        https://nagakawa.com.vn/copy-of-may-hut-mui-kinh-thang-nkth05m70
+        https://nagakawa.com.vn/may-hut-mui-kinh-vat-nkvh02m70
+        https://nagakawa.com.vn/may-rua-bat-nagakawa-nag3601m15
+        https://nagakawa.com.vn/may-rua-bat-nagakawa-nk8d01m
+        https://nagakawa.com.vn/may-rua-bat-cao-cap-nagakawa-nk8d61m
+        https://nagakawa.com.vn/may-rua-bat-nagakawa-nk10d01m
+        https://nagakawa.com.vn/may-rua-bat-nagakawa-nk13d02m
+        https://nagakawa.com.vn/may-rua-bat-nagakawa-nk15d05m
+        https://nagakawa.com.vn/may-rua-bat-nagakawa-nk15d06m-1
+        https://nagakawa.com.vn/may-rua-bat-nagakawa-nk15d03m';
+
+        $codess = explode(PHP_EOL, $code);
+
+        foreach ($codess as $key => $value) {
+
+            $url                =  $value;
+
+            $html               = file_get_html(trim($url));
+
+            $name               = trim(strip_tags($html->find('.title-product', 0)));
+
+            $details            = html_entity_decode($html->find('.product-content-2',0));
+
+            $Salient_Features   = html_entity_decode($html->find('.product-summary', 0));
+
+            $Specifications     = html_entity_decode($html->find('#product-thongso .content', 0));
+
+            $image              =  $this->uploadImg($html->find('.list-image img', 0)->src);
+
+          
+
+            $product_sku        =  trim(strip_tags($html->find('.product-sku', 0)));
+
+            $price              =  str_replace(['.', '₫'], '', strip_tags($html->find('.product-price', 0)));
+
+            $manuPrice          = 0;
+
+            $giftPrice          = 0;
+
+            $limits             = 0;
+
+            $inputPrice         = 0;
+
+            $link               = basename($url);
+
+            $Qualtity           = 0;
+
+            $Maker              = 12;
+
+            $Meta_id            =  $this->addMeta();
+
+            $view               = 0;
+
+            $groupid            = 2;
+
+            $orders_hot         = 0;
+
+            $active             = 0;
+
+            $sale_order         = 0;
+
+            $promotion_box      = 0;
+
+            $user_id            = 4;
+
+            $insert             = ['Name'=>$name, 'Image'=>$image??'', 'ProductSku'=>$product_sku, 'Price'=>$price, 'manuPrice'=>$manuPrice, 'GiftPrice'=>$giftPrice, 'limits'=>$limits, 'InputPrice'=>$inputPrice, 'id_group_product'=>0, 'Link'=>$link, 'LinkRedirect'=>'', 'Detail'=>$details, 'Salient_Features'=>$Salient_Features, 'Specifications'=>$Specifications, 'Quantily'=>$Qualtity, 'promotion'=>'', 'Maker'=>$Maker, 'Meta_id'=>$Meta_id??'', 'views'=>$view, 'Group_id'=>$groupid, 'orders_hot'=>$orders_hot, 'active'=>$active, 'sale_order'=>$sale_order, 'promotion_box'=>$promotion_box, 'user_id'=>$user_id, 'updated_at'=>Carbon::now(), 'created_at'=>Carbon::now()];
+
+            DB::table('products')->insert($insert);
+        }
+        echo "thành công";
+       
+    }
+
+
+    public function uploadImg($images)
+    {   
+        $images = 'http://'.$images;
+        $images = str_replace('//b', 'b', $images);
+        $img  = '/uploads/product/crawl/'.str_replace(strstr(basename($images), '?'), '', basename($images)) ;
+        file_put_contents(public_path().$img, file_get_contents($images));
+       
+        return $img;
+    }
+
+
+    public function addMeta()
+    {
+        $meta = new metaSeo();
+        $meta->meta_content = '';
+        $meta->meta_title = '';
+        $meta->meta_key_words = '';
+        $meta->meta_og_title = '';
+        $meta->meta_og_content = '';
+        $meta->save();
+        return $meta->id;
+    }
+
+
+
     public function addNames()
     {
         $product = product::where('id_group_product', NULL)->get()->pluck('id')->toArray();
@@ -60,6 +332,7 @@ class crawlController extends Controller
         echo "thanh cong";
 
     }
+
     public function sosanh()
     {
 
@@ -250,7 +523,8 @@ class crawlController extends Controller
     }
 
     public function echo(){
-         $banners = banners::where('option','=',0)->take(6)->OrderBy('stt', 'asc')->where('active','=',1)->select('title', 'image', 'title', 'link')->get();
+
+        $banners = banners::where('option','=',0)->take(6)->OrderBy('stt', 'asc')->where('active','=',1)->select('title', 'image', 'title', 'link')->get();
 
         $deal = deal::OrderBy('order', 'desc')->get();
 
@@ -1284,14 +1558,11 @@ class crawlController extends Controller
         for($i= 1; $i<2; $i++){
 
             $meta = new metaSeo();
-
             $meta->meta_content = '';
-
             $meta->meta_title = '';
             $meta->meta_key_words = '';
             $meta->meta_og_title = '';
             $meta->meta_og_content = '';
-
             $meta->save();
 
         }

@@ -156,7 +156,7 @@
                 </div>
                 <div class="cell-5-12 tab-cell-1-1">
                     <div class="content-detail" style="position: relative;">
-                        <h1 class="product-name-detail">{{ @$data->Name }}</h1>
+                        <h1 class="product-name-detail">{{ @strip_tags($data->Name) }}</h1>
                         <div class="c10"></div>
                         <div class="attr-item">
                             <div class="attr-name">Mã SP</div>
