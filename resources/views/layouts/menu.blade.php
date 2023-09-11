@@ -155,7 +155,7 @@
 @if(Auth::user()->permision>1)
 
 <li class="nav-item">
-    <a href="https://giadunggiadinh.vn/admins/category/8"
+    <a href="https://giadunggiadinh.vn/admins/products"
        class="nav-link {{ Request::is('products*') ? 'active' : '' }}">
         <p>Sản phẩm</p>
     </a>
