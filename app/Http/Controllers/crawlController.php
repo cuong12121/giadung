@@ -294,7 +294,7 @@ class crawlController extends Controller
 
                 $images = 'http://'.$value->src;
                 $images = str_replace('//b', 'b', $images);
-                $img  = '/uploads/crawl/child'.str_replace(strstr(basename($images), '?'), '', basename($images));
+                $img  = '/uploads/crawl/child/'.str_replace(strstr(basename($images), '?'), '', basename($images));
                 file_put_contents(public_path().$img, file_get_contents($images));
                 $image = new image;
                 $image->image = $img;
