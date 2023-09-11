@@ -278,6 +278,37 @@ class crawlController extends Controller
     }
 
 
+    public function showImagePd()
+    {
+        for ($i=4992; $i < 5171; $i++) { 
+
+            $product = product::find($i);
+
+            $url = 'https://nagakawa.com.vn/'.$product->Link;
+
+            $html= file_get_html(trim($url));
+
+            $image = $html->find('.list-image img');
+
+            foreach ($image as $key => $value) {
+
+                $images = 'http://'.$value->src;
+                $images = str_replace('//b', 'b', $images);
+                $img  = '/uploads/crawl/child'.str_replace(strstr(basename($images), '?'), '', basename($images));
+                file_put_contents(public_path().$img, file_get_contents($images));
+                $image = new image;
+                $image->image = $img;
+                $image->link  = $img;
+                $image->order  = 0;
+                $image->product_id  = $i;
+                $image->save();
+            }
+        }
+        echo "thành công";
+       
+    }
+
+
     public function uploadImg($images)
     {   
         $images = 'http://'.$images;
