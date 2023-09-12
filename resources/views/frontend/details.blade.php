@@ -106,13 +106,11 @@
                        
                                 @foreach( $images_products as $image)
 
-                                {{ $image->image }}
-
-                               <!--  @if(!empty($image->image) && '_'.basename($image->image) != $image_product)
+                                @if(!empty($image->image) && '_'.basename($image->image) != $image_product)
 
                                 <div class="swiper-slide"><img src="{{ asset($image->image) }}" width="100%"></div>
 
-                                @endif     -->
+                                @endif    
 
                                 @endforeach 
 
