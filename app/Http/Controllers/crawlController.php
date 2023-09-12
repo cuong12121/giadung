@@ -278,6 +278,39 @@ class crawlController extends Controller
     }
 
 
+    public function showMetaView()
+    {
+
+        for ($i=4992; $i < 5171; $i++) { 
+
+            $product = product::find($i);
+
+            $url = 'https://nagakawa.com.vn/'.$product->Link;
+
+            $html= file_get_html(trim($url));
+
+            $keyword = htmlspecialchars($html->find("meta[name=description]",0)->getAttribute('content'));
+
+            $content = $html->find("meta[name=description]",0) ->getAttribute('content');
+
+            $title   = $html-> find("title",0)-> plaintext;
+
+            $meta    = metaSeo::find($product->Meta_id);
+
+            $meta->meta_content =  str_replace('#', '', $content);
+
+            $meta->meta_title = $title;
+
+            $meta->meta_key_words = str_replace('#', '', $content);
+
+            $meta->save();
+
+        }
+        echo "thành công";
+
+    }
+
+
     public function showImagePd()
     {
         for ($i=4992; $i < 5171; $i++) { 

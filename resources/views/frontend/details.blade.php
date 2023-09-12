@@ -68,31 +68,23 @@
                     <div class="swiper-container gallery-top">
                         <div class="swiper-wrapper">
                              <?php 
-                            $image_product = strstr(basename($data->Image), '_');
-                        ?>
+                                $image_product = strstr(basename($data->Image), '_');
+                            ?>
 
                             <?php 
-                            $images_products = Cache::rememberForever('image_product'.$data->id, function() use ($data) {
 
-                                $images = App\Models\image::where('product_id', $data->id)->where('active', 1)->select('image')->get()??'';
+                                $images_products = App\Models\image::where('product_id', $data->id)->where('active', 1)->select('image')->get()??'';
 
-                                return $images;
-                            
-                            });
-
-
-                        
-                        ?>
+                            ?>
 
                         @if(isset($images_products))
                        
                         @foreach( $images_products as $image)
-
+                        
                         @if(!empty($image->image) && '_'.basename($image->image) != $image_product)
 
-                       
-
-                            <div class="swiper-slide"><a href="{{ asset($image->image) }}" onclick="return hs.expand(this)"><img src="{{ asset($image->image) }}" alt="Combo 2: Nồi 1.6L + máy xay 0.6L + set Quà tặng" width="100%"></a></div>
+                            <div class="swiper-slide"><a href="{{ asset($image->image) }}" onclick="return hs.expand(this)"><img src="{{ asset($image->image) }}" alt="{{ 
+                                strip_tags($data->Name) }}" width="100%"></a></div>
 
                         @endif    
 
