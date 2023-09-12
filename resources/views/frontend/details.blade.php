@@ -75,8 +75,6 @@
 
                                 $images_products = App\Models\image::where('product_id', $data->id)->where('active', 1)->select('image')->get()??'';
 
-
-
                             ?>
 
                         @if(isset($images_products))
