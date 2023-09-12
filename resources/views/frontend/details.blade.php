@@ -75,18 +75,16 @@
 
                                 $images_products = App\Models\image::where('product_id', $data->id)->where('active', 1)->select('image')->get()??'';
 
+
+
                             ?>
 
                         @if(isset($images_products))
-                       
+
                         @foreach( $images_products as $image)
-                        
-                        @if(!empty($image->image) && '_'.basename($image->image) != $image_product)
 
                             <div class="swiper-slide"><a href="{{ asset($image->image) }}" onclick="return hs.expand(this)"><img src="{{ asset($image->image) }}" alt="{{ 
                                 strip_tags($data->Name) }}" width="100%"></a></div>
-
-                        @endif    
 
                         @endforeach   
                          
