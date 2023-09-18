@@ -1,6 +1,6 @@
 <urlset  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://thegioitulanh.com.vn/</loc>
+		<loc>https://giadunggiadinh.vn/</loc>
 	</url>
 
 
