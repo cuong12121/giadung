@@ -31,18 +31,21 @@ class sitemapController extends Controller
    public function sitemapChildProduct()
    {
 
-    $data        = groupProduct::find(3);
+    $data        = groupProduct::find(107);
 
-    $product_tl  = json_decode($data->product_id);
+    $data_household = groupProduct::find(100);
 
+    $product_data_1  = json_decode($data->product_id);
 
-    $product   =  product::whereIn('id',  $product_tl)->orderBy('id', 'desc')->take(80)->get();
+    $product_data_2  = json_decode($data_household->product_id);
 
-   
+    $product_add     = array_merge($product_data_1, $product_data_2);
 
-       return response()->view('sitemap.child', [
+    $product   =  product::whereIn('id',  $product_add)->orderBy('id', 'desc')->take(80)->get();
+
+     return response()->view('sitemap.child', [
             'product' => $product,
-        ])->header('Content-Type', 'text/xml');
+     ])->header('Content-Type', 'text/xml');
    }
    public function sitemapChildBlog()
    {
