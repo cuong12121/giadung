@@ -41,7 +41,7 @@ class sitemapController extends Controller
 
     $product_add     = array_merge($product_data_1, $product_data_2);
 
-    $product   =  product::whereIn('id',  $product_add)->orderBy('id', 'desc')->take(180)->get();
+    $product   =  product::whereIn('id',  $product_add)->orderBy('id', 'desc')->take(280)->get();
 
      return response()->view('sitemap.child', [
             'product' => $product,
