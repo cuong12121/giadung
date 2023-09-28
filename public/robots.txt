@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /admins
+Disallow: ^/(.*)dactyloid(.*)[0-9]+\.html$
 
 
 
