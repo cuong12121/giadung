@@ -352,10 +352,10 @@
                              (8h00 - 17h00)
                         </span> 
                     </a> 
-                    <a href="tel:0247.303.6336" title="Mua hàng: 0247.303.6336" class="p_hotline_item"> 
+                    <a href="tel:0983612828" title="Mua hàng: 098.361.2828" class="p_hotline_item"> 
                         <i class="icon_purchase"></i> 
                         <span>
-                            <strong>Mua hàng: 098.361.2626</strong> 
+                            <strong>Mua hàng: 098.361.2828</strong> 
                             <br>
                             (8h00 - 17h00)
                         </span> 
