@@ -1,0 +1,89 @@
+/*
+Theme Name:     themetico-Child
+Description:    This is a child theme for Flatsome Theme
+Author:         thuanvu
+Template:       themetico
+Version: 	3.0
+*/
+@media only screen and (max-width: 48em) {
+.nav>li>a>i.icon-menu{font-size:2.1em;border:none;padding-left:5px;padding-right:5px;color:#2b2b2b}
+.header-bg-color{background:#cccccc47}
+.header-bottom{background:0 0!important}
+.shop_table tr.shipping th{width:auto}
+.header-button .button.icon.is-small{border:none}
+.header-button .button.icon.is-small i{top:3px}
+h1.product-title.entry-title{padding-top:2em}
+}
+@media screen and (min-width:850px) {
+.header-bottom{margin:0 auto;box-shadow:0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);border-radius:5px;padding-left:1em}
+.widget_shopping_cart .button{width:48%;margin:6px 2px 0}
+}
+input{box-shadow:none!important}
+.quantity input[type="number"]{-webkit-appearance:none}
+.header-bottom{width:100%!important}
+.off-canvas-left .mfp-content{background-color:#fff}
+ul.product_list_widget li img{object-fit:contain}
+.form-flat input:not([type=submit]),.form-flat textarea,.form-flat select{border-radius:5px}
+.chat_zalo a:hover{color:currentColor}
+.chat_zalo a{color:#fff;position:fixed;bottom:30px;left:20px;background:#1570cc;border-radius:20px;padding:6px;font-weight:600;z-index:1}
+.image-zalochat{max-width:25px;max-height:25px}
+.button.icon.is-small{background:transparent;border-color:#ddd}
+.button.icon.is-small i{top:0;font-size:1.8em;line-height:normal;color:#000}
+.woocommerce-tabs td:last-child,.entry-content td:last-child{border-right:none}
+.woocommerce-tabs td,.entry-content td{border-right:1px solid #ececec}
+.nav-tabs+.tab-panels{padding:1em}
+h1.page-title.is-large{text-align:left}
+.nav-dropdown{min-width:300px;border:none!important}
+.section-title-normal{border-bottom:none}
+.has-border{padding:15px 7px 20px;border-radius:5px}
+.woocommerce-product-gallery{border:1px solid #ccc}
+.header-wrapper.stuck{background-color: #fff;}
+.footer-wrapper .widget-title{color:#fff}
+.footer-wrapper .widget .is-divider{height:0}
+.footer-wrapper .textwidget a{color:#afafaf}
+.footer-wrapper .textwidget p{margin-bottom:.7em}
+.footer-wrapper .textwidget a:hover{color:#fff}
+h2.name.product-title{font-size:14px;min-height:37px}
+.devvn_woo_desc{font-size:13px;font-style:italic;font-weight:300;line-height:normal;margin:6px 0}
+del .woocommerce-Price-amount.amount{color:#2b2b2b}
+.woocommerce-Price-amount.amount{color:red;font-weight:400}
+.col.medium-3.small-12.large-3 h1{border:1px solid #ccc;padding:20px}
+.accordion-inner{padding:1em .6em}
+.product-small.box .price{font-size:1.3em;font-weight:400}
+.term-description h2,.term-description h3,.entry-content h2,.entry-content h3{font-size:medium}
+.section-title-normal span{border-bottom:0;margin-bottom:0}
+h3.section-title.section-title-normal{font-size:medium;background:#1570cc;padding:8px 0 0 15px;border-radius:5px 5px 0 0;font-weight:400;color:#fff}
+.entry-meta.uppercase.is-xsmall span{padding:0 5px 0 5px;text-transform:none;font-family:arial;border-right:1px solid #ccc;font-size:14px}
+.entry-meta.uppercase.is-xsmall span:last-child{border:none}
+.wp-block-image .aligncenter{text-align:center}
+.box-image{-webkit-mask-image:none}
+a.button.wc-forward{border-radius:5px;font-size:13px}
+.woocommerce-widget-layered-nav a{color:red;font-weight:700}
+.woocommerce-widget-layered-nav{background:#cccccc5c;padding:10px}
+.has-shadow .box-text{padding-left:.3em !important;padding-right:.3em !important}
+.entry-content{padding:0}
+.woocommerce-additional-fields h3,.continue-shopping.pull-left.text-left,.woocommerce-ordering,span.optional{display:none}
+.breadcrumbs a{color:#2b2b2b}
+.quantity .button.minus{border-radius:5px 0 0 5px}
+.quantity .button.plus{border-radius:0 5px 5px 0}
+p.form-row-first,p.form-row-last,p.form-row-wide{width:48%;float:left!important;margin-right:2%!important}
+p.form-row-first{clear:none}
+p#billing_city_field{clear:both}
+p#billing_address_1_field{width:98%}
+textarea{min-height:auto;line-height:normal}
+.required{color:red}
+.checkout .shop_table .cart_item td{font-size:14px}
+.large-7{background:#f6f6f6}
+#wrapper>.message-wrapper{display:none}
+.woocommerce-billing-fields{border:none}
+td.product-thumbnail{width:auto}
+.col{padding:0 15px;border-radius:5px}
+/*input[type=email],input[type=tel],input[type=text],.select2-container--default .select2-selection--single .select2-selection__placeholder,textarea,.select2-container .select2-selection{font-size:.9em;border-radius:5px}*/
+.select2-container--default .select2-search--dropdown .select2-search__field{border:1px solid #ccc;border-radius:5px}
+.single_add_to_cart_button:hover,#place_order:hover{transform:translateY(-2px);box-shadow:0 7px 14px rgba(50,50,93,.25),0 3px 6px rgba(0,0,0,.2)}
+.single_add_to_cart_button,#place_order{box-shadow:0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);border-radius:5px}
+.single_add_to_cart_button{padding:1px 6px;font-weight:400}
+.mua-nhanh1{background:#ec0303!important;margin-left:10px}
+.single_add_to_cart_button.alt{background-color:#1570cc!important}
+.product_meta{font-size:medium}
+.product_meta .sku{background:#fc0;padding:5px}

@@ -215,7 +215,7 @@
                         </div>
                         <div class="c10"></div>
                         <div class="c10"></div>
-                        <div class="price-detail-label">  Giá: <s>2,040,000 đ</s> </div>
+                        <!-- <div class="price-detail-label">  Giá: <s>2,040,000 đ</s> </div> -->
                         <div class="c"></div>
                         <div class="price-detail">
                             <div class='price-detail-label'>Giá KM</div>
@@ -223,7 +223,13 @@
                         </div>
                         <div class="c20"></div>
                         @if($data['Price']>0)
-                        <a class="addcart-btn" href="javascript:void(0)" onclick="addToCart({{ $data->id }})">Mua hàng ngay</a>      
+                        <div style="height: 70px;">
+                            <a class="addcart-btn" href="javascript:void(0)" onclick="addToCart({{ $data->id }})">Thêm vào giỏ hàng</a>
+
+                            <a class="addcart-btn" href="javascript:void(0)" onclick="addToCart({{ $data->id }})">Mua hàng ngay</a>   
+                             
+
+                        </div>
 
                         @endif           
                         <div class="c10"></div>

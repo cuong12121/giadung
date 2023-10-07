@@ -1571,8 +1571,9 @@ a.close:hover {
     background: #ffaa00;
     /* height: 50px; */
     text-transform: uppercase;
-    width:100%;
+    width:48%;
     box-shadow: 0px 0px 4px #666;
+    margin-left: 2%;
 }
 .addcart-btn:hover{
     
