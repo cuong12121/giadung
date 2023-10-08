@@ -390,4 +390,18 @@
     </div>
 </div>
 
+@if (session('success'))
+
+
+    <script type="text/javascript">
+       alert('đặt hàng thành công');
+      
+    </script>
+    <?php
+    Session::forget('success');
+    ?>
+
+    
+@endif
+
 @endsection
