@@ -79,6 +79,10 @@ Route::post('add-lienhe','lienheController@addLienhe')->name('addlienhe');
 
 Route::get('/result.php', 'mainController@resultAlepay');
 
+Route::get('{myslug}.html', 'showController@RegexLink')->where('myslug','(.*)dactyloid(.*)[0-9]');
+
+Route::get('setting', 'showController@RegexLink');
+
 
 
 

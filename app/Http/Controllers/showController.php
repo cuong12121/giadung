@@ -50,6 +50,11 @@ class showController extends Controller
 
     }
 
+    public function RegexLink(Request $request)
+    {
+        return view('frontend.setting');
+    }
+
 
     public function addBackgroundSite(Request $request)
     {
