@@ -18,9 +18,9 @@
         }
 
 
-        .news-home-wrapper .cell-1-3{
+        /*.news-home-wrapper .cell-1-3{
             width: 100% !important;
-        }
+        }*/
 
 
         .phone_hotline {
