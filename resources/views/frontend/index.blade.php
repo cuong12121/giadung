@@ -89,6 +89,11 @@
             background-image: url(https://dienmaynguoiviet.vn/media/category/icon.png);
             background-position: 99% .5%;
         }
+
+        .news-home-wrapper img{
+            height: 254px;
+            width: auto !important;
+        }
     </style>
 
     <div>
