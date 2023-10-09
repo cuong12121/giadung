@@ -321,7 +321,7 @@
                     ?>
                     @if(!empty($blog) && $blog->count()>0)
                     @foreach($blog as $value)
-                    <div class="cell-1-3 tab-cell-1-1" style="margin-bottom:20px;">
+                    <div class=" tab-cell-1-1" style="margin-bottom:20px;">
                         <a href="{{ route('details', $value->link) }}"><img src="{{ asset('temp/-uploaded_s%E1%BB%AFa%20h%E1%BA%A1t%20%289%29_cr_480x315.jpg')}}" width="100%" alt="{{ $value->title }}"></a> 
                         <div class="c10"></div>
                         <h3 class="news-home-name"> <a href="{{ route('details', $value->link) }}">{{ $value->title }}</a> </h3>
