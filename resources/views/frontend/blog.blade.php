@@ -101,6 +101,8 @@
     <!--<hr>-->
     <!-- begin footer -->
 
+     @include('frontend.layouts.footer')
+
     @endsection
    
     

@@ -27,7 +27,7 @@
         <link href="favicon.ico" rel="shortcut icon">
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/swiper.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=7">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/grid.css')}}">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -65,10 +65,7 @@
                 font-weight: bold !important;
             }
 
-            .flex-container{
-                line-height: 57px;
-            }
-
+           
             .search-header{
                 display: flex;
                 align-items: center;
@@ -77,6 +74,28 @@
             .box-head-3{
                 display: flex;
                 align-items: center;
+            }
+
+            .icon-cart a{
+                float:left;
+                font-size: 18px;
+            }
+
+            .icon-cart{
+                font-size: 18px;
+            }
+
+            .hotline{
+                color:#fff;
+                font-size: 18px;
+            }
+
+            .shopping-cart a{
+                font-size: 18px;
+            }
+
+            .item_in_cart{
+                margin-left: 5px;
             }
         </style>
 
@@ -116,14 +135,19 @@
                     <div class="shopping-cart">
                        
                         <div class="icon-cart">
-                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        
-                             <a href="{{ route('cart-tgtl') }}"> Giỏ hàng </a>
+
                             <span class="item_in_cart countcarts">{{ $number_cart_home }}</span>
+
+                            <a href="{{ route('cart-tgtl') }}">
+                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                             </a>
+                            
+                            
+                            
                         </div>
 
                          <div class="hotline">
-                            Hotline: <a href="tel:0348949926">098.361.2828</a>
+                            <span>Hotline: </span>  <a href="tel:0348949926">098.361.2828</a>
                         </div>
                     </div>
                     
