@@ -64,6 +64,10 @@
             .item_in_cart{
                 font-weight: bold !important;
             }
+
+            .flex-container{
+                line-height: 57px;
+            }
         </style>
 
         
