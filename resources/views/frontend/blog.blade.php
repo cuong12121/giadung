@@ -66,9 +66,7 @@
                                 <a href="{{ route('details', $value->link) }}" class="name">{{ $value->title }}</a>
                                 
                             </div>
-                            <div>
-                                <a href="{{ route('details', $value->link) }}" class="linkview">Xem chi tiết ›</a>
-                            </div>
+                            
                             
                         </div>
                        
