@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v=8881288.8883.151">
     <link rel="stylesheet" href="{{ asset('css/customs.css') }}?v=245754.75.52928">
+
+    <style type="text/css">
+        .blog-list-item{
+            display: flex;
+        }
+
+
+    </style>
     @endpush
    
      <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/category.css') }}">  -->
@@ -17,6 +25,10 @@
     <style type="text/css">
         .header__top-mobile{
             height: 133px;
+        }
+
+        .main-blog-list{
+            width: 50% !important;
         }
     </style>
     <!-- end header -->
@@ -45,8 +57,7 @@
                         
                         @isset($data)
                         @foreach($data as $value)
-                        @if($value->category!=5)
-                        
+                       
                         <div class="blog-list-item">
                             <a href="{{ route('details', $value->link) }}" class="img">
                             <img src="{{ asset($value->image) }}" data-src ="{{ asset($value->image) }}" alt="{{ $value->title }}">
@@ -58,7 +69,7 @@
                                 <a href="{{ route('details', $value->link) }}" class="linkview">Xem chi tiết ›</a>
                             </div>
                         </div>
-                        @endif
+                       
                         @endforeach
                         @endisset
                         
