@@ -68,6 +68,11 @@
             .flex-container{
                 line-height: 57px;
             }
+
+            .search-header{
+                display: flex;
+                align-items: center;
+            }
         </style>
 
         
@@ -83,17 +88,15 @@
                     <div class="logo"><a href="{{ route('homeFe') }}"><img src="../uploaded/logo/logo.png" alt="LogoSite" style="max-width:100%; margin:0 auto"></a></div>
                     <div class="c5"></div>
                 </div>
-                <div class="cell-5-12" style="position:relative;">
-                    <div class="c20"></div>
-                    <div class="c10"></div>
+                <div class="cell-5-12 search-header" style="position:relative;">
+                   
                     <div class="search-pc">
                         <form action="{{ route('search-product-frontend') }}" method="get" id="searchformtab">
                             <input name="key" class="kw" placeholder="Tìm kiếm " type="text" id="kws" required>
                             <a href="#" class="fa fa-search submit-search-pc" onclick="$('#searchformtab').submit();return false;"><img style="float: left;"></a>
                         </form>
                     </div>
-                    <div class="c10"></div>
-                    <div class="c20"></div>
+                   
                 </div>
                 <?php 
 
