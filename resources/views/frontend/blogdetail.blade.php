@@ -38,6 +38,10 @@
         .shopping-cart{
             margin-top: 0 !important;
         }
+
+        .flex-container{
+            line-height: 57px;
+        }
     </style>
     <main class="bg-fff container">
         <!-- Begin menu blog -->
