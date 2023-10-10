@@ -19,8 +19,7 @@
         <meta http-equiv="Content-Language" content="VN">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <meta name="google-site-verification" content="hEXEIIUEWRNJmlTbvJZXlRLAxCygVXhctyKMwNI7WGU" />
-        
+       
         <meta property="og:type" name="og:type" content="website" data-app="">
         <meta property="og:description" name="og:description" content="" data-app="">
         <meta property="og:title" name="og:title" content="Gia Dụng " data-app="">
@@ -53,6 +52,18 @@
             .item-c-total{
                 font-size: 2rem !important;
             }
+
+            .shopping-cart{
+                margin-top: 0;
+            }
+
+            .news a{
+                padding-left: 20px;
+            }
+
+            .item_in_cart{
+                font-weight: bold !important;
+            }
         </style>
 
         
@@ -63,12 +74,12 @@
     <div class="header hide-on-tab hide-on-mobile">
         <div class="grid">
             <div class="flex-container flex-space-between">
-                <div class="cell-3-10">
+                <div class="cell-3-12">
                     <div class="c5"></div>
-                    <!-- <div class="logo"><a href="{{ route('homeFe') }}"><img src="../uploaded/logo/logo%20%281%29.png" alt="LogoSite" style="max-width:100%; margin:0 auto"></a></div> -->
+                    <div class="logo"><a href="{{ route('homeFe') }}"><img src="../uploaded/logo/logo.png" alt="LogoSite" style="max-width:100%; margin:0 auto"></a></div>
                     <div class="c5"></div>
                 </div>
-                <div class="cell-4-10" style="position:relative;">
+                <div class="cell-5-12" style="position:relative;">
                     <div class="c20"></div>
                     <div class="c10"></div>
                     <div class="search-pc">
@@ -80,9 +91,6 @@
                     <div class="c10"></div>
                     <div class="c20"></div>
                 </div>
-
-                
-
                 <?php 
 
                     $cart = Gloudemans\Shoppingcart\Facades\Cart::content();
@@ -90,10 +98,15 @@
                     $number_cart_home = count($cart);
 
                 ?>
-                
-                <div class="cell-3-10">
+               
+                <div class="cell-4-12">
+                   
                     <div class="c10"></div>
+                    <div class="c20"></div>
 
+                    <div class="hotline news">
+                        <a href="{{ route('details', 'tin-tuc') }}">Tin tức</a>
+                    </div>
                     <div class="shopping-cart">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         &nbsp;
@@ -102,10 +115,16 @@
                         </div>
                         <a href="{{ route('cart-tgtl') }}"> Giỏ hàng </a>
                     </div>
-                    <div class="c2"></div>
+
+
+                    
                     <div class="hotline">
                         Hotline: <a href="tel:0348949926">098.361.2828</a>
                     </div>
+
+
+
+                   
                 </div>
             </div>
         </div>
@@ -325,6 +344,32 @@
            $('.dropdown-menu').hide();
             
         });
+
+
+         function addCartFast(id) {
+    
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    
+        $.ajax({
+            type: 'POST',
+            url: "{{ route('addcartfast') }}",
+            data: {
+                product_id: id,
+                   
+            },
+            success: function(result){
+    
+                $('.countcarts').text(result);
+                alert('Thêm sản phẩm vào giỏ hàng thành công !');
+
+            }
+        });
+        
+    }
 
           </script>
     </body>

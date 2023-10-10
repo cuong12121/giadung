@@ -224,7 +224,7 @@
                         <div class="c20"></div>
                         @if($data['Price']>0)
                         <div style="height: 70px;">
-                            <a class="addcart-btn" href="javascript:void(0)" onclick="addToCart({{ $data->id }})">Thêm vào giỏ hàng</a>
+                            <a class="addcart-btn" href="javascript:void(0)" onclick="addCartFast({{ $data->id }})">Thêm vào giỏ hàng</a>
 
                             <a class="addcart-btn" href="javascript:void(0)" onclick="addToCart({{ $data->id }})">Mua hàng ngay</a>   
                              
@@ -373,6 +373,8 @@
         });
         
     }
+
+    
 
 </script>
 

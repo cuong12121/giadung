@@ -157,7 +157,7 @@ img{
 
 .logo{
     float: left;
-	width:135px;
+	width:235px;
 }
 .logo img, .logo-mobile img{
     display:inline-block;
@@ -1244,12 +1244,12 @@ a.close:hover {
 
 .shopping-cart{
     float: right;
-    padding: 5px 20px;
+/*    padding: 5px 20px;*/
     margin-top: 10px;
     color: #FFF;
     background: url(../images/icon-cart.png) no-repeat 10px center;
     padding-left: 40px;
-    padding-top: 8px;
+/*    padding-top: 8px;*/
 }
 .shopping-cart a{
     display: block;
