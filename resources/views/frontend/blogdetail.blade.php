@@ -30,6 +30,9 @@
         .header__top-mobile{
             height: 133px;
         }
+        img{
+            width: auto !important;
+        }
     </style>
     <main class="bg-fff container">
         <!-- Begin menu blog -->

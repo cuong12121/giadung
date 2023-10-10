@@ -324,7 +324,7 @@
                 <div class="c20"></div>
                 <div class="flex-container flex-space-between">
                     <?php
-                        $blog = App\Models\post::take(3)->Orderby('id', 'desc')->get();
+                        $blog = App\Models\post::take(3)->Orderby('id', 'desc')->where('active', 1)->get();
                     ?>
                     @if(!empty($blog) && $blog->count()>0)
                     @foreach($blog as $value)
