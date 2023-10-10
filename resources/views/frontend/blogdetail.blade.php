@@ -34,6 +34,10 @@
             width: auto !important;
             height: auto !important;
         }
+
+        .shopping-cart{
+            margin-top: 0 !important;
+        }
     </style>
     <main class="bg-fff container">
         <!-- Begin menu blog -->
