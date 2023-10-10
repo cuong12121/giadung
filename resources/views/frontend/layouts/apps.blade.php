@@ -114,17 +114,20 @@
                 <div class="cell-4-12 box-head-3">
                 
                     <div class="shopping-cart">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        &nbsp;
+                       
                         <div class="icon-cart">
+                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        
+                             <a href="{{ route('cart-tgtl') }}"> Giỏ hàng </a>
                             <span class="item_in_cart countcarts">{{ $number_cart_home }}</span>
                         </div>
-                        <a href="{{ route('cart-tgtl') }}"> Giỏ hàng </a>
+
+                         <div class="hotline">
+                            Hotline: <a href="tel:0348949926">098.361.2828</a>
+                        </div>
                     </div>
                     
-                    <div class="hotline">
-                        Hotline: <a href="tel:0348949926">098.361.2828</a>
-                    </div>
+                    
 
                     <div class="hotline news">
                         <a href="{{ route('details', 'tin-tuc') }}">Tin tức</a>
