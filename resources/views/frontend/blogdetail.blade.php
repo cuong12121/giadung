@@ -32,6 +32,7 @@
         }
         img{
             width: auto !important;
+            height: auto !important;
         }
     </style>
     <main class="bg-fff container">
