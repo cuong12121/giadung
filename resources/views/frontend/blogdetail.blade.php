@@ -39,6 +39,10 @@
             margin-top: 0 !important;
         }
 
+        .detail-head h1{
+            font-size: 1.5em;
+        }
+
 
     </style>
     <main class="bg-fff container">
