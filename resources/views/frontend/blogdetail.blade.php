@@ -195,6 +195,7 @@
     <!-- end main -->
     <!--<hr>-->
     <!-- begin footer -->
+     @include('frontend.layouts.footer')
     @push('script')
      <script type="text/javascript">
         $('img').closest('p').css('text-align', 'center');
