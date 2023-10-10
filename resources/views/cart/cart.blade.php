@@ -3,12 +3,19 @@
 @section('content')
 
 <style>
+
+    @media screen and (min-width: 768px) {
+        .wrap {
+            width: 1436px;
+        }
+    }    
     #submit-cart{
         cursor: pointer;
     }
 
+
     .wrap {
-        width: 1436px;
+        width: 100%;
         margin: 0 auto;
         padding: 0;
         position: relative;
