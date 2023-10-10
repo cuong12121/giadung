@@ -39,7 +39,7 @@
             margin-top: 0 !important;
         }
 
-        
+
     </style>
     <main class="bg-fff container">
         <!-- Begin menu blog -->
@@ -125,7 +125,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-10">
                     <div class="main-blog-list">
                         <div style="width:100%; height: 50px;">
                             <h1 class="title">{{  $data->category==5?'':$name_cate}}</h1>
@@ -191,10 +191,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="banner-blog">
-                    </div>
-                </div>
+                
             </div>
         </div>
     </main>
