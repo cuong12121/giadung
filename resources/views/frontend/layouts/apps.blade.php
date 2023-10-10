@@ -73,6 +73,11 @@
                 display: flex;
                 align-items: center;
             }
+
+            .box-head-3{
+                display: flex;
+                align-items: center;
+            }
         </style>
 
         
@@ -106,14 +111,8 @@
 
                 ?>
                
-                <div class="cell-4-12">
-                   
-                    <div class="c10"></div>
-                    <div class="c20"></div>
-
-                    <div class="hotline news">
-                        <a href="{{ route('details', 'tin-tuc') }}">Tin tức</a>
-                    </div>
+                <div class="cell-4-12 box-head-3">
+                
                     <div class="shopping-cart">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         &nbsp;
@@ -122,16 +121,14 @@
                         </div>
                         <a href="{{ route('cart-tgtl') }}"> Giỏ hàng </a>
                     </div>
-
-
                     
                     <div class="hotline">
                         Hotline: <a href="tel:0348949926">098.361.2828</a>
                     </div>
 
-
-
-                   
+                    <div class="hotline news">
+                        <a href="{{ route('details', 'tin-tuc') }}">Tin tức</a>
+                    </div>
                 </div>
             </div>
         </div>
