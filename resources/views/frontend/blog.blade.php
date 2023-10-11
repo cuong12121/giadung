@@ -58,7 +58,7 @@
                         @isset($data)
                         @foreach($data as $value)
                        
-                        <div class="blog-list-item col-lg-6">
+                        <div class="blog-list-item col-lg-12">
                             <a href="{{ route('details', $value->link) }}" class="img">
                             <img src="{{ asset($value->image) }}" data-src ="{{ asset($value->image) }}" alt="{{ $value->title }}">
                             </a>
