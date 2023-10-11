@@ -97,6 +97,16 @@
             .item_in_cart{
                 margin-left: 5px;
             }
+            .header{
+                height: 75px;
+            }
+
+            .header .grid, .header .grid, .header .flex-space-between, .header .logo, .head-logo, .header img{
+                height: 100% !important;
+            }
+            .header img, .header .logo{
+                width: 100%;
+            }
         </style>
 
         
@@ -107,10 +117,10 @@
     <div class="header hide-on-tab hide-on-mobile">
         <div class="grid">
             <div class="flex-container flex-space-between">
-                <div class="cell-3-12">
-                    <div class="c5"></div>
+                <div class="cell-3-12 head-logo">
+                   
                     <div class="logo"><a href="{{ route('homeFe') }}"><img src="../uploaded/logo/logo.png" alt="LogoSite" style="max-width:100%; margin:0 auto"></a></div>
-                    <div class="c5"></div>
+                    
                 </div>
                 <div class="cell-5-12 search-header" style="position:relative;">
                    
