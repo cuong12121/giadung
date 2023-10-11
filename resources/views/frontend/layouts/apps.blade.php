@@ -98,7 +98,7 @@
                 margin-left: 5px;
             }
             .header{
-                height: 75px;
+                height: auto;
             }
 
             .header .grid, .header .grid, .header .flex-space-between, .header .logo, .head-logo, .header img{
