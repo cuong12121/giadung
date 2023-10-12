@@ -108,6 +108,10 @@
                 width: 100%;
             }
 
+            .ui-id-1{
+                z-index: 9999;
+            }
+
             @media only screen and (max-width: 767px) {
                 .header-mobile {
                     background: #3bbcc6;
