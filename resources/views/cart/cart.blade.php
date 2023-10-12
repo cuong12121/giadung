@@ -404,9 +404,7 @@ $number_cart = count($cart);
                                                             <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod"  checked='checked' data-order_button_text="" />
                                                             <label for="payment_method_cod">
                                                             Thanh toán khi nhận hàng    </label>
-                                                            <div class="payment_box payment_method_cod" >
-                                                                <p><img alt="thanh toán" src="https://static.quatdientico.com/wp-content/uploads/2019/11/thanh-toan-cod.jpg"></p>
-                                                            </div>
+                                                            
                                                         </li>
                                                     </ul>
                                                     <div class="form-row place-order">
