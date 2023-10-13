@@ -313,6 +313,7 @@
             <div class="flex-container flex-space-between">
                 @if(!empty($other_product))
                 @foreach($other_product as $value)
+                @if($value->Price != 0)
                 <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
                         <div class='discount-tags'>-13%</div>
                         <div style="overflow: hidden; border:solid 1px #EEE; position:relative;"> 
@@ -327,6 +328,7 @@
                             <div class="price">{{ @str_replace(',' ,'.', number_format($value->Price)) }}đ</div>
                         </div>
                     </div>
+                @endif   
                 @endforeach
                 @endif
                 
