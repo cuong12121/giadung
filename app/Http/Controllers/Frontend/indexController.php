@@ -25,6 +25,11 @@ class indexController extends Controller
        
         $data = groupProduct::find(107);
 
+        if(empty($data)){
+
+            return view('frontend.setting');
+        }
+
         $ar_product = json_decode($data->product_id);
 
         $kitchen = product::where('Price','>', 0)->whereIn('id', $ar_product)->where('active', 1)->take(10)->get();
