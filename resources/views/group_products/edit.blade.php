@@ -16,7 +16,7 @@
      <?php $metaSeo = App\Models\metaSeo::find($groupProduct->Meta_id); ?>
 
      @if(!empty($metaSeo))
-    <div class="btn btn-info seo-click"> Dùng cho SEO </div>
+    <a href="{{ route('groupProducts.create') }}"> <div class="btn btn-info seo-click"> Thêm mới nhóm sản phẩm </div></a>
    
     <div class="content px-3">
 
