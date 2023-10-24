@@ -54,10 +54,10 @@
         <h3>👨‍🔧</h3>
     </div>
     <div class="error-msg-container">
-        <h3>Page đang xây dựng</h3>
+        <h3>Page đang bảo trì</h3>
         <h3>xin vui lòng quay lại sau</h3>
 
-        <a href="/"><h3>Quay lại trang chủ</h3></a>
+        <!-- <a href="/"><h3>Quay lại trang chủ</h3></a> -->
        
     </div>
 
