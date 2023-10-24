@@ -24,7 +24,7 @@
         <meta property="og:description" name="og:description" content="" data-app="">
         <meta property="og:title" name="og:title" content="Gia Dụng " data-app="">
         <meta property="og:image" name="og:image" content="" data-app="">
-        <link href="favicon.ico" rel="shortcut icon">
+        <link href="{{ asset('uploaded/logo/Favicon.png') }}" rel="shortcut icon">
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/swiper.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=8">
