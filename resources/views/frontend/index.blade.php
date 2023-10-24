@@ -246,7 +246,7 @@
                 <div class="c10"></div>
                 <div class="flex-container flex-space-between">
 
-                    @if(!empty($household) && $household->count()>0)
+                    @if(!empty($household))
                     @foreach($household as $value)
                     <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
                         <div class='discount-tags'>-13%</div>
@@ -287,7 +287,7 @@
                 <a class="view-more-home" href="{{ route('details', 'san-pham-nha-bep') }}">Xem tiếp <i class="fa fa-angle-right"></i></a>
                 <div class="c10"></div>
                 <div class="flex-container flex-space-between">
-                    @if(!empty($kitchen) && $kitchen->count()>0)
+                    @if(!empty($kitchen))
                     @foreach($kitchen as $value)
                     <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
                         <div class='discount-tags'>-13%</div>
