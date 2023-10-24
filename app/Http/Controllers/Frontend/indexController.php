@@ -27,13 +27,13 @@ class indexController extends Controller
 
         $ar_product = json_decode($data->product_id);
 
-        $kitchen = product::where('Price','>', 0)->whereIn('id', $ar_product)->take(10)->get();
+        $kitchen = product::where('Price','>', 0)->whereIn('id', $ar_product)->where('active', 1)->take(10)->get();
 
         $data_household = groupProduct::find(100);
 
         $household = json_decode($data_household->product_id);
 
-        $household  =product::where('Price','>', 0)->whereIn('id', $household)->take(10)->get();
+        $household  =product::where('Price','>', 0)->whereIn('id', $household)->where('active', 1)->take(10)->get();
 
         return view('frontend.index', compact('household', 'kitchen'));
     }
