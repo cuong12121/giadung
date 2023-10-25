@@ -27,27 +27,30 @@ class indexController extends Controller
 
         $household =[];
 
-        $kitchen= [];
+        $info_group = [];
 
-        if(!empty($data)){
-            $ar_product = json_decode($data->product_id);
+        $group_show_info = [1,9,19];
 
-            $kitchen = product::where('Price','>', 0)->whereIn('id', $ar_product)->where('active', 1)->take(10)->get();
+        foreach($group_show_info as $val){
 
-            $ar_product = json_decode($data->product_id);
+            $datas = groupProduct::find($val);
 
-            $kitchen = product::where('Price','>', 0)->whereIn('id', $ar_product)->where('active', 1)->take(10)->get();
+            $ar_product = json_decode($datas->product_id);
 
-            $data_household = groupProduct::find(9);
+           
 
-            $household = json_decode($data_household->product_id);
+            $data = product::where('Price','>', 0)->whereIn('id', $ar_product)->where('active', 1)->take(10)->get();
 
-            $household  =product::where('Price','>', 0)->whereIn('id', $household)->where('active', 1)->take(10)->get();
+
+            array_push($household, $data);
+
+
+            array_push($info_group, $datas);
+
         }
 
     
-
-        return view('frontend.index', compact('household', 'kitchen'));
+        return view('frontend.index', compact('info_group', 'household'));
     }
 
 

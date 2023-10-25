@@ -234,20 +234,25 @@
         </div>
 
 
+        @if(isset($household) && count($household)>0)
+        @for($i=0; $i<count($household); $i++)
         <div class="grid">
             <div>
                 <div class="c20"></div>
                 <div class="cat-home-drop" style="position:relative; float:left; ">
-                    <h2 class="title-cat-home">Sản phẩm gia dụng </h2>
+                    <h2 class="title-cat-home">{{  $info_group[$i]->name }} </h2>
                     <div class="sub-cat">
                     </div>
                 </div>
-                <a class="view-more-home" href="{{ route('details', 'san-pham-gia-dung') }}">Xem tiếp <i class="fa fa-angle-right"></i></a>
+                
+                <a class="view-more-home" href="{{ route('details', $info_group[$i]->link) }}">Xem tiếp <i class="fa fa-angle-right"></i></a>
                 <div class="c10"></div>
                 <div class="flex-container flex-space-between">
 
-                    @if(!empty($household))
-                    @foreach($household as $value)
+                    @if(!empty($household[$i]))
+                    @foreach($household[$i] as $value)
+
+
                     <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
                         <div class='discount-tags'>-13%</div>
                         <div style="overflow: hidden; border:solid 1px #EEE; position:relative; height: 248px;"> 
@@ -273,47 +278,9 @@
               
             </div>
         </div>
+        @endfor
+        @endif
 
-
-
-        <div class="grid">
-            <div>
-                <div class="c20"></div>
-                <div class="cat-home-drop" style="position:relative; float:left; ">
-                    <h2 class="title-cat-home">Sản phẩm nhà bếp </h2>
-                    <div class="sub-cat">
-                    </div>
-                </div>
-                <a class="view-more-home" href="{{ route('details', 'san-pham-nha-bep') }}">Xem tiếp <i class="fa fa-angle-right"></i></a>
-                <div class="c10"></div>
-                <div class="flex-container flex-space-between">
-                    @if(!empty($kitchen))
-                    @foreach($kitchen as $value)
-                    <div class="cell-1-5 tab-cell-1-2 cell-pro-home float">
-                        <div class='discount-tags'>-13%</div>
-                        <div class="box-dom"> 
-                            <a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}"><img src="{{ asset($value->Image)}}" alt="{{ $value->Name }}" width="100%"></a> 
-                            <a class="cart-icon" href="{{ route('details', $value->Link) }}"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                        </div>
-                        <h3 class="product-name"><a href="{{ route('details', $value->Link) }}" title="{{ $value->Name }}">{{ $value->Name }}</a></h3>
-                        <div class="c5"></div>
-                        <div class="center-text">
-                            <!-- <div class="pricekm"><s>1,490,000đ </s></div>
-                            <div class="c3"></div> -->
-                            <div class="price">{{ @str_replace(',' ,'.', number_format($value->Price)) }}đ</div>
-                        </div>
-                    </div>
-                    @endforeach
-                    @endif
-                    
-                </div>
-                <div class="c10"></div>
-                <div class="c20" style="border-bottom: solid 2px #DDD;"></div>
-                <div class="c20"></div>
-                <div class="c20"></div>
-              
-            </div>
-        </div>
 
 
         <div class="grid hide-on-tab" style="min-height:300px;">
