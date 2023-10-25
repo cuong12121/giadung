@@ -23,7 +23,7 @@ class indexController extends Controller
     public function index()
     {
        
-        $data = groupProduct::find(107);
+        $data = groupProduct::find(1);
 
         $household =[];
 
@@ -38,7 +38,7 @@ class indexController extends Controller
 
             $kitchen = product::where('Price','>', 0)->whereIn('id', $ar_product)->where('active', 1)->take(10)->get();
 
-            $data_household = groupProduct::find(100);
+            $data_household = groupProduct::find(19);
 
             $household = json_decode($data_household->product_id);
 
