@@ -38,7 +38,7 @@ class crawlController extends Controller
 
         foreach ($data as $key => $value) {
 
-            echo $value->Name.'<br>';
+            echo $value->ProductSku.'<br>';
         }
     }
 
