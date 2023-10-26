@@ -32,6 +32,16 @@ use \Carbon\Carbon;
 class crawlController extends Controller
 {
 
+    public function showPd()
+    {
+        $data = product::select('id', 'Name', 'Link', 'ProductSku')->get();
+
+        foreach ($data as $key => $value) {
+            
+            echo $value->Name;
+        }
+    }
+
     public function crawlDataGiadung()
     {
 
