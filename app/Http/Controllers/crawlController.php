@@ -37,8 +37,8 @@ class crawlController extends Controller
         $data = product::select('id', 'Name', 'Link', 'ProductSku')->get();
 
         foreach ($data as $key => $value) {
-            
-            echo $value->Name;
+
+            echo $value->Name.'<br>';
         }
     }
 
