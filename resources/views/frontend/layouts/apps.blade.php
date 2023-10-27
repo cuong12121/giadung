@@ -234,10 +234,12 @@
 
                     <?php 
 
-                        $menu = App\Models\groupProduct::select('link', 'name', 'id')->where('parent_id', 100)->get();
+                        $menu = App\Models\groupProduct::select('link', 'name', 'id')->get();
                     ?>
                     @if(!empty($menu) && $menu->count()>0)
                     @foreach($menu as $key=> $value)
+
+                    @if(!empty(json_decode($value->product_id)) && count(json_decode($value->product_id))>20 )
                     <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; "> 
                         <a href="{{ route('details', $value->link??'') }}"  class="parent_menu" data-id="dropdownMenuButton_{{ $key }}">{{ $value->name }}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_{{ $key }}" id="dropdownMenuButton_{{ $key }}">
@@ -256,7 +258,7 @@
 
                     </li>
 
-                    
+                    @endif
                     @endforeach
 
                     @endif
