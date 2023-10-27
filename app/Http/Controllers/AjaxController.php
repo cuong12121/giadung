@@ -564,7 +564,7 @@ class AjaxController extends Controller
 
         $product_id = $request->product_id;
     
-        $data = groupProduct::where('parent_id', $id)->get();
+        $data = groupProduct::where('group_product_id', $id)->get();
         
 
 
