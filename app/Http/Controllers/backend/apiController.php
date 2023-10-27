@@ -6,7 +6,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\product;
 use App\Models\apiUpdate;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
+use App\Models\deal;
+use Illuminate\Support\Facades\Redirect;
+use DB;
+
 
 class apiController extends Controller
 {
@@ -75,30 +80,138 @@ class apiController extends Controller
 
     public function checkDeal()
     {
-        Cache::forget('product_search');
+        return Redirect::to('https://dantri.com.vn/');
 
-        $productss = product::select('Link', 'Name', 'Image', 'Price', 'id', 'ProductSku')->where('active', 1)->get();
+    }
 
-        Cache::forever('product_search',$productss);
+    public function updateProductInDay()
+    {
+        $now     = Carbon::now();
+        $product = product::whereDate('updated_at', Carbon::today())->get();
 
-        $data =  Cache::get('product_search');
+        $data_update = [];
 
-        $search = 'Máy giặt LG ';
+        $i = 0;
+        if(!empty($product) && $product->count()>0){
+            foreach ($product as $key => $value) {
+                $i++;
 
-        $collection = collect($data)->filter(function ($item) use ($search) {
-            return false !== strpos($item->ProductSku, $search);
-        });
+                $data_update[$i]['product'] =  $value->ProductSku;
 
-        if($collection->count()==0){
+                $data_update[$i]['price']   =  $value->Price;
+                
+            }
+        }
+        
 
-            $collection = collect($data)->filter(function ($item) use ($search) {
-                return false !== strpos($item->Name, $search);
-            });
+        $data = json_encode($data_update);
 
-            $collection = $collection->take(6)->sortByDesc('id');
+        echo $data;
+
+        die();
+    }
+
+    public function updateProductAll(Request $request)
+    {
+       
+        $dataproduct = json_decode($request->getContent());
+
+        $updated = [];
+        
+        $price_add ='';
+
+        foreach ($dataproduct as $key => $value) {
+
+            if(!empty($value->model)){
+
+                $product = product::select('Price', 'id')->where('ProductSku', trim($value->model))->first();
+
+                if(!empty($product)){
+
+                    $product->Price =   trim(str_replace('.', '', $value->price));
+
+                    $product->save(); 
+
+                    $price_add = $product->Price;
+
+                }
+                else{
+                    $price_add ='';
+                }
+
+            }
+            
+            //chạy sản phẩm kiểm tra model 
+
+            $updated[$key]['model'] = @trim($value->model);
+            $updated[$key]['price'] = $price_add;
+          
         }
 
-      
-        dd($collection);
+        return $updated;
+
     }
+
+
+    public function checkDealUpdate()
+    {
+        $now     = Carbon::now();
+
+        $product = deal::where('active',1)->whereDate('updated_at', Carbon::today())->get();
+
+        $data_update = [];
+
+        $i = 0;
+        if(!empty($product) && $product->count()>0){
+            foreach ($product as $key => $value) {
+
+                if($now->between($value->start, $value->end)){
+                    $i++;
+
+                    $data_update[$i]['product'] =   product::find($value->product_id)->ProductSku;
+
+                    $data_update[$i]['price']   =  $value->deal_price;
+                }
+            }
+        }
+        
+
+        $data = json_encode($data_update);
+
+        echo $data;
+
+        die();
+    }
+
+    public function checkproduct(Request $request)
+    {
+
+        $dataproduct = json_decode($request->getContent());
+
+        $update = [];
+
+        foreach ($dataproduct as $key => $value) {
+
+            $product = product::select('ProductSku')->where('ProductSku', trim($value->model))->first();
+
+            if(empty($product)){
+
+                // $check  = DB::table('run_check_model')->where('model', trim($value->model))->first();
+
+                // if(empty($check)){
+
+                //     $insert = DB::table('run_check_model')->insert(['model'=>$value->model]);
+
+                    
+                // }
+                array_push($update, $value->model);
+               
+            }
+
+        }
+
+        return response()->json(['data' => $update]);
+
+    }
+
 }

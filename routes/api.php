@@ -40,3 +40,7 @@ Route::resource('properties', 'propertyAPIController');
 Route::resource('gifts', 'giftAPIController');
 
 Route::put('api-update-product/{slug}', 'backend\apiController@updateProduct');
+
+Route::get('show-list-product-update', 'backend\apiController@updateProductInDay');
+
+Route::get('show-list-deal-update-price', 'backend\apiController@checkDealUpdate');
