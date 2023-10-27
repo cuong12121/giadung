@@ -239,7 +239,7 @@
                     @if(!empty($menu) && $menu->count()>0)
                     @foreach($menu as $key=> $value)
 
-                    @if(!empty(json_decode($value->product_id)) && count(json_decode($value->product_id))>10 )
+                    @if(!empty(json_decode($value->product_id)) && count(json_decode($value->product_id))>5 )
                     <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; "> 
                         <a href="{{ route('details', $value->link??'') }}"  class="parent_menu" data-id="dropdownMenuButton_{{ $key }}">{{ $value->name }}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_{{ $key }}" id="dropdownMenuButton_{{ $key }}">
