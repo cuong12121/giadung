@@ -31,9 +31,9 @@ class sitemapController extends Controller
    public function sitemapChildProduct()
    {
 
-    $data        = groupProduct::find(107);
+    $data        = groupProduct::find(1);
 
-    $data_household = groupProduct::find(100);
+    $data_household = groupProduct::find(9);
 
     $product_data_1  = json_decode($data->product_id);
 
