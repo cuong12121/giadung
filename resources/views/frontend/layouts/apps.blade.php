@@ -229,9 +229,15 @@
         <div class="grid">
             <div class="flex-container flex-centered">
                 <ul class="nav  hide-on-tab hide-on-mobile dropdown">
-                    <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}" style="background:url() center left no-repeat; "> <a href="/" class="">Home </a>
+
+                    <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> 
+                        <a href="/" class="">Tất cả danh mục </a>
                     </li>
 
+                    <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> <a href="/" class="">Home </a>
+                    </li>
+
+                 
                     <?php 
 
                         $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->where('parent_id', 0)->get();
