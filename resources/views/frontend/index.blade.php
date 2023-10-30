@@ -95,9 +95,7 @@
             width: auto !important;
         }
 
-        .dropdown-menu{
-            width: 200px;
-        }
+       
     </style>
 
     <div>
