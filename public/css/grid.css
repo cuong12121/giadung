@@ -63,7 +63,7 @@ body {
     justify-content:space-around;
 }
 .flex-space-between {
-    justify-content:space-between;
+    justify-content:left;
 }
 .flex-flex-end{
 	justify-content:flex-end;
