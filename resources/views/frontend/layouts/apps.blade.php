@@ -119,8 +119,12 @@
             }
 
             #submenu-2{
-                width: 1000px;
+                width: 1000px !important;
                 display: flex;
+            }
+
+             .dropdown-menu{
+                width: 220px;
             }
 
             aside{
