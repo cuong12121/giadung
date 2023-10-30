@@ -115,11 +115,11 @@
             }
 
             #dropdownMenuButton_100 a{
-                font-size: 14px !important;
+                font-size: 16px !important;
             }
 
             #submenu-2{
-                width: 1000px !important;
+                width: 500px !important;
                 display: flex;
             }
 
@@ -144,11 +144,17 @@
 
     <?php 
 
+
+
+        $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->where('parent_id', 0)->where('active', 1)->get();
+
         $id_group_pd_define = [144,32,29,20,21,31,27,58,59,145];
 
-        $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->whereIn('id', $id_group_pd_define)->where('active', 1)->get();
+        $menu_all = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->whereIn('id', $id_group_pd_define)->where('active', 1)->get();
 
-        $menu_chunk = $menu->chunk(5);
+        $menu_chunk = $menu_all->chunk(5);
+
+      
 
 
     ?>
