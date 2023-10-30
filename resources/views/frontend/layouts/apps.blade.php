@@ -124,7 +124,7 @@
             }
 
              .drop-menu{
-                width: 220px;
+                width: 240px;
             }
 
             aside{
@@ -198,8 +198,6 @@
                             <a href="{{ route('cart-tgtl') }}">
                                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                              </a>
-                            
-                            
                             
                         </div>
 
