@@ -150,7 +150,7 @@
 
         $id_group_pd_define = [144,32,29,20,21,31,27,58,59,145];
 
-        $menu_all = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->whereIn('id', $id_group_pd_define)->where('active', 1)->get();
+        $menu_all = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->whereIn('id', $id_group_pd_define)->where('active', 1)->OrderBy('id', 'desc')->get();
 
         $menu_chunk = $menu_all->chunk(5);
 
