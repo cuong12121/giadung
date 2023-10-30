@@ -257,7 +257,7 @@
 
                         $count++;
                     ?>
-                    <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}" style="background:url() center left no-repeat; "> 
+                    <li class="{{  !empty($link)&&$link ===$value->link?'active':'' }}"> 
                         <a href="{{ route('details', $value->link??'') }}"  class="parent_menu" data-id="dropdownMenuButton_{{ $key }}">{{ $value->name }}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_{{ $key }}" id="dropdownMenuButton_{{ $key }}">
 
