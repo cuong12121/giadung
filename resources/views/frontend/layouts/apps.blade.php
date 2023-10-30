@@ -234,7 +234,7 @@
 
                     <?php 
 
-                        $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->get();
+                        $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->where('parent_id', 0)->get();
                     ?>
                     @if(!empty($menu) && $menu->count()>0)
 
@@ -261,6 +261,7 @@
                             ?>
                             @if($child_menu->count()>0)
                             @foreach($child_menu as $childmenus)
+
                             <a class="dropdown-item" href="{{ route('details', $childmenus->link??'') }}">{{ @$childmenus->name }}</a>
 
                             @endforeach

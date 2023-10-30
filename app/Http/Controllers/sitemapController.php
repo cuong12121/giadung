@@ -58,7 +58,5 @@ class sitemapController extends Controller
    }
    
 
-
-
 }
 

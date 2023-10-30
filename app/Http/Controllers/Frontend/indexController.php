@@ -36,8 +36,7 @@ class indexController extends Controller
             $datas = groupProduct::find($val);
 
             $ar_product = json_decode($datas->product_id);
-
-           
+            
 
             $data = product::where('Price','>', 0)->whereIn('id', $ar_product)->where('active', 1)->take(10)->get();
 
