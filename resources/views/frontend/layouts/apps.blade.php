@@ -148,7 +148,7 @@
 
         $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->where('parent_id', 0)->where('active', 1)->get();
 
-        $id_group_pd_define = [144,32,29,20,21,31,27,58,59,145];
+        $id_group_pd_define = [144,32,29,20,21,31,27,58,59,145,19,127];
 
         $menu_all = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->whereIn('id', $id_group_pd_define)->where('active', 1)->OrderBy('id', 'desc')->get();
 
