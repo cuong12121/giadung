@@ -1388,7 +1388,8 @@ a.close:hover {
 }
 .cell-pro-home img{
     display:block;
-	
+	height: 230px;
+    width: auto;
 }
 
 .pro-tags{
