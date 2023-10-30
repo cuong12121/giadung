@@ -257,7 +257,7 @@
             <div class="flex-container flex-centered">
                 <ul class="nav  hide-on-tab hide-on-mobile dropdown">
 
-                    <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> 
+                   <!--  <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> 
                         <a href="/"  class="parent_menu" data-id="dropdownMenuButton_100">Tất cả danh mục </a>
                         
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_100" id="dropdownMenuButton_100" style="display: none;"> 
@@ -284,7 +284,7 @@
                             
                         </div>
 
-                    </li>
+                    </li> -->
 
                     <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> <a href="/" class="">Home </a>
                     </li>
