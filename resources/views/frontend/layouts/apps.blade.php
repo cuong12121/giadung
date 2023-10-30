@@ -144,9 +144,11 @@
 
     <?php 
 
-        $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->where('parent_id', 0)->where('active', 1)->get();
+        $id_group_pd_define = [144,32,29,20,21,31,27,58,59,145];
 
-        $menu_chunk = $menu->chunk(10);
+        $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->whereIn('id', $id_group_pd_define)->where('active', 1)->get();
+
+        $menu_chunk = $menu->chunk(5);
 
 
     ?>
@@ -257,7 +259,7 @@
             <div class="flex-container flex-centered">
                 <ul class="nav  hide-on-tab hide-on-mobile dropdown">
 
-                   <!--  <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> 
+                    <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> 
                         <a href="/"  class="parent_menu" data-id="dropdownMenuButton_100">Tất cả danh mục </a>
                         
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_100" id="dropdownMenuButton_100" style="display: none;"> 
@@ -284,10 +286,10 @@
                             
                         </div>
 
-                    </li> -->
-
-                    <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> <a href="/" class="">Home </a>
                     </li>
+
+                    <!-- <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> <a href="/" class="">Home </a>
+                    </li> -->
 
                  
                     
