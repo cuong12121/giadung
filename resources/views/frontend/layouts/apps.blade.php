@@ -291,7 +291,7 @@
 
                     @endif
 
-                    <li class="" style="background:url() center left no-repeat; "> <a href="{{ route('details', 'may-loc-nuoc') }}" class="">Máy lọc nước </a> </li>
+                    <li> <a href="{{ route('details', 'may-loc-nuoc') }}" class="">Máy lọc nước </a> </li>
                    
                 </ul>
             </div>
