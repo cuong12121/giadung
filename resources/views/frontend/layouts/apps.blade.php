@@ -114,6 +114,19 @@
                 z-index: 9999;
             }
 
+            #dropdownMenuButton_100 a{
+                font-size: 14px !important;
+            }
+
+            #submenu-2{
+                width: 1000px;
+                display: flex;
+            }
+
+            aside{
+                width: 30%;
+            }
+
             @media only screen and (max-width: 767px) {
                 .header-mobile {
                     background: #3bbcc6;
@@ -123,6 +136,16 @@
 
         
     </head>
+
+
+    <?php 
+
+        $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->where('parent_id', 0)->where('active', 1)->get();
+
+        $menu_chunk = $menu->chunk(10);
+
+
+    ?>
     <body>
 
         <div id="page">
@@ -231,17 +254,39 @@
                 <ul class="nav  hide-on-tab hide-on-mobile dropdown">
 
                     <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> 
-                        <a href="/" class="">Tất cả danh mục </a>
+                        <a href="/"  class="parent_menu" data-id="dropdownMenuButton_100">Tất cả danh mục </a>
+                        
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_100" id="dropdownMenuButton_100" style="display: none;"> 
+
+                            <div id="submenu-2" class="submenu">
+
+                                @if(!empty($menu_chunk) && $menu_chunk->count()>0)
+
+
+                                @for($i=0; $i<$menu_chunk->count(); $i++)
+
+                                   
+                                <aside>
+                                    @foreach($menu_chunk[$i] as $value)
+                                    <a href="{{ route('details', $value->link) }}" class="">
+                                        {{ $value->name }}
+                                    </a>
+                                     @endforeach
+                                </aside>
+                               
+                                @endfor
+                                @endif
+                            </div>
+                            
+                        </div>
+
                     </li>
 
                     <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> <a href="/" class="">Home </a>
                     </li>
 
                  
-                    <?php 
-
-                        $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->where('parent_id', 0)->get();
-                    ?>
+                    
                     @if(!empty($menu) && $menu->count()>0)
 
                     <?php 
