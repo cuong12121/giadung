@@ -80,10 +80,7 @@
 
     <div class="btn btn-warning {{ !empty($_GET['mota'])?'activess':'' }}"><a href="{{ route('products.edit', $product->id) }}?mota={{ $product->id }}">Mô tả</a></div>
 
-    <?php 
 
-        dd(get_Group_Product($product->id));
-    ?>
     <div class="btn btn-warning  {{ !empty($_GET['specifications'])?'activess':'' }}" ><a href="{{ route('filter-property') }}?group-product={{ get_Group_Product($product->id)[0]??'' }}&productId={{ $product->id }}">Thông số</a></div>
     <div class="btn btn-warning"><a href="{{ route('images.create') }}?{{ $product->id }}">Ảnh</a></div>
 <!--     <div class="btn btn-warning" ><a href="#mo-ta">Thông số kỹ thuật chi tiết</a></div> -->
