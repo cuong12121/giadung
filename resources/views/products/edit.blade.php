@@ -27,7 +27,7 @@
 
                 foreach($infoProductOfGroup as $key => $val){
 
-
+                    
                     if(!empty($val['product_id'])&& in_array($id, json_decode($val['product_id']))){
 
                         array_push($result, $val['id']);
@@ -44,7 +44,7 @@
             return $result;
         }
 
-        dd(get_Group_Product($product->id)[0]??'');
+        // dd(get_Group_Product($product->id)[0]??'');
     ?>        
 
    <!--  <div class="btn btn-warning"><a href="{{ route('metaSeos.edit', 1) }}"></a>Seo</div> -->
