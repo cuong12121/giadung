@@ -62,7 +62,7 @@
 
                         foreach($infoProductOfGroup as $key => $val){
 
-                            dd($val['product_id']);
+                            dd($val['id']);
                             
                             if(!empty($val['product_id'])&& in_array($id, json_decode($val['product_id']))){
 
