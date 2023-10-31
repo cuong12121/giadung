@@ -56,9 +56,23 @@ class propertyController extends AppBaseController
      */
     public function store(CreatepropertyRequest $request)
     {
-        $input = $request->all();
 
-        $property = $this->propertyRepository->create($input);
+        $name = trim(nl2br($request->name));
+
+        $data_ar = explode('<br />', $name);
+
+        if(isset($data_ar) && count($data_ar)>0){
+
+            foreach ($data_ar as $value) {
+
+                $input = ['name'=>trim($value), 'filterId'=>$request->filterId];
+
+                $property = $this->propertyRepository->create($input);
+                
+            }
+
+        }
+
 
         Flash::success('Property saved successfully.');
 
