@@ -21,6 +21,8 @@
 
             $infoProductOfGroup = App\Models\groupProduct::select('product_id', 'id')->whereIn('id', $data_groupProduct)->get()->toArray();
 
+            dd($infoProductOfGroup);
+
             $result = [];
 
 
