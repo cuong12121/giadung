@@ -46,7 +46,7 @@
             if(!empty($result[0]) && $result[0]==8){
                 $data_groupProduct = App\Models\groupProduct::where('level', 2)->get()->pluck('id');
 
-                dd($data_groupProduct);
+
 
                 if(isset($data_groupProduct)){
 
@@ -55,6 +55,8 @@
                     $result = [];
 
                     $infoProductOfGroup = App\Models\groupProduct::select('product_id', 'id')->whereIn('id', $data_groupProduct)->get()->toArray();
+
+                    dd($infoProductOfGroup);
 
                     if(isset($infoProductOfGroup)){
 
