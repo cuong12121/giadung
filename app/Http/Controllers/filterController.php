@@ -32,6 +32,7 @@ class filterController extends AppBaseController
     {
         $filters = $this->filterRepository->paginate(10);
 
+
         return view('filters.index')
             ->with('filters', $filters);
     }
@@ -129,7 +130,6 @@ class filterController extends AppBaseController
 
         $group_id = $filter_link->group_product_id;
 
-       
 
         return redirect(route('filters.create').'?groupid='.$group_id);
     }
