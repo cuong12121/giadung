@@ -38,8 +38,13 @@
 
             }
 
+
+            // tim nhom con trong nhom cha 
+
             return $result;
         }
+
+        dd(get_Group_Product($product->id)[0]??'');
     ?>        
 
    <!--  <div class="btn btn-warning"><a href="{{ route('metaSeos.edit', 1) }}"></a>Seo</div> -->
