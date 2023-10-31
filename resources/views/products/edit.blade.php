@@ -21,10 +21,7 @@
 
             $infoProductOfGroup = App\Models\groupProduct::select('product_id', 'id')->whereIn('id', $data_groupProduct)->get()->toArray();
 
-
-
             $result = [];
-
 
             if(isset($infoProductOfGroup)){
 
@@ -41,42 +38,35 @@
 
             }
 
+            // if(!empty($result[0])){
 
+            //     $data_groupProduct = App\Models\groupProduct::where('level', 1)->get()->pluck('id');
 
-            if(!empty($result[0]) && $result[0]==8){
-                $data_groupProduct = App\Models\groupProduct::where('level', 2)->get()->pluck('id');
+            //     if(isset($data_groupProduct)){
 
+            //         $result = [];
 
+            //         $infoProductOfGroup = App\Models\groupProduct::select('product_id', 'id')->whereIn('id', $data_groupProduct)->get()->toArray();
 
-                if(isset($data_groupProduct)){
+            //         if(isset($infoProductOfGroup)){
 
+            //             foreach($infoProductOfGroup as $key => $val){
 
+            //                 dd($val['id']);
 
-                    $result = [];
+            //                 if(!empty($val['product_id'])&& in_array($id, json_decode($val['product_id']))){
 
-                    $infoProductOfGroup = App\Models\groupProduct::select('product_id', 'id')->whereIn('id', $data_groupProduct)->get()->toArray();
-
-
-
-                    if(isset($infoProductOfGroup)){
-
-                        foreach($infoProductOfGroup as $key => $val){
-
-                            dd($val['id']);
-                            
-                            if(!empty($val['product_id'])&& in_array($id, json_decode($val['product_id']))){
-
-                                array_push($result, $val['id']);
-                            }
+            //                     array_push($result, $val['id']);
+            //                 }
                            
                             
-                        }
+            //             }
 
-                    }
-                }
+            //         }
+            //     }
 
 
-            }
+            // }
 
             return $result;
         }
