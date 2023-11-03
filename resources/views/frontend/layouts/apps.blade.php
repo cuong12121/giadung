@@ -505,13 +505,13 @@
 
 
 
-            if(id !='dropdownMenuButton_100'){
+            // if(id !='dropdownMenuButton_100'){
                 
-                 $('.dropdown-menu').hide();
-            }
+            //      $('.dropdown-menu').hide();
+            // }
 
            
-
+            $('.dropdown-menu').hide();
             div.show();
 
         })
