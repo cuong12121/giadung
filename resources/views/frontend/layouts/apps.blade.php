@@ -29,7 +29,7 @@
        
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/swiper.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=9">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=10">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/grid.css')}}?ver=1">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -118,18 +118,37 @@
                 font-size: 16px !important;
             }
 
-            #submenu-2{
+           /* #submenu-2{
                 width: 500px !important;
                 display: flex;
-            }
+            }*/
 
              .drop-menu{
                 width: 240px;
             }
 
+
             aside{
                 width: 30%;
             }
+
+            .dropdown-menu{
+                min-width: 200px;
+                line-height:30px;
+            }
+
+            .submenu-sub aside{
+                display: none;
+                left: 200px;
+                position: absolute;
+                width: 200px;
+                background: #fff;
+                border: #ddd;
+                top:0;
+                height: 340px;
+            }
+
+            .submenu-1
 
             @media only screen and (max-width: 767px) {
                 .header-mobile {
@@ -143,20 +162,11 @@
 
 
     <?php 
-
-
-
         $menu = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->where('parent_id', 0)->where('active', 1)->get();
 
-        $id_group_pd_define = [144,32,29,20,21,31,27,58,59,145,19,127];
+        $id_group_pd_define = [144,32,29,20,21,31,27,22,145,19,127];
 
         $menu_all = App\Models\groupProduct::select('link', 'name', 'id', 'product_id')->whereIn('id', $id_group_pd_define)->where('active', 1)->OrderBy('id', 'desc')->get();
-
-        $menu_chunk = $menu_all->chunk(5);
-
-      
-
-
     ?>
     <body>
 
@@ -263,33 +273,37 @@
             <div class="flex-container flex-centered">
                 <ul class="nav  hide-on-tab hide-on-mobile dropdown">
 
-                    <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> 
-                        <a href="/"  class="parent_menu" data-id="dropdownMenuButton_100">Tất cả danh mục </a>
-                        
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_100" id="dropdownMenuButton_100" style="display: none;"> 
+                    <li class="active">
+                        <a href="/" class="parent_menu" data-id="dropdownMenuButton_100">Tất cả danh mục </a> 
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton_100" id="dropdownMenuButton_100">
+                            
+                            <div class="submenu submenu-1">
+                                @foreach($menu_all as $key => $value)
+                                <a href="{{ route('details', $value->link) }}" data-id="submenu-{{ $key }}" > {{ $value->name }} </a> 
+                                <?php 
 
-                            <div id="submenu-2" class="submenu">
-
-                                @if(!empty($menu_chunk) && $menu_chunk->count()>0)
-
-
-                                @for($i=0; $i<$menu_chunk->count(); $i++)
-
-                                   
-                                <aside>
-                                    @foreach($menu_chunk[$i] as $value)
-                                    <a href="{{ route('details', $value->link) }}" class="">
-                                        {{ $value->name }}
-                                    </a>
-                                     @endforeach
-                                </aside>
-                               
-                                @endfor
-                                @endif
+                                    $child_menu = App\Models\groupProduct::where('parent_id', $value->id)->select('id','name', 'link')->get();
+                                ?>
+                                 @if(!empty($child_menu) &&  $child_menu->count()>0)
+                                <div id="submenu-{{ $key }}" class="submenu submenu-sub">
+                                    <aside>
+                                        @foreach($child_menu as $value)
+                                        <a href="{{ route('details', $value->link) }}" >
+                                            {{ $value->name??'' }}
+                                        </a>
+                                        @endforeach
+                                       
+                                    </aside>
+                                  
+                                </div>
+                                 @endif
+                                @endforeach
+                                
                             </div>
+
+                               
                             
                         </div>
-
                     </li>
 
                     <!-- <li class="{{ Route::currentRouteName()==='homeFe'?'active':'' }}"> <a href="/" class="">Home </a>
@@ -337,12 +351,9 @@
                         }
                     ?>
 
-
                     @endif
 
-                    
                     @endforeach
-
 
                     @endif
 
@@ -390,10 +401,34 @@
                 );
                 return ok;
             }
+
+            $('.submenu-1 a').hover(
+
+                function() {
+                    
+                  
+                     var id = $(this).attr('data-id');
+                     $('#'+id+' aside').show();
+                    
+                },
+                
+            );
+
+            $('.submenu-1 aside').hover(
+
+                function() {
+                    
+                    
+                    $('.submenu submenu-1 aside').show();
+                },
+                
+            );
+
+          
+          
             
-            $(function () {
-                $('.countcart').html('(93)');
-            });
+          
+
         </script>
         <nav id="menu">
             <ul>
@@ -480,11 +515,11 @@
 
         })
 
-        $(".nav li").mouseleave(function(){
+        // $(".nav li").mouseleave(function(){
             
-           $('.dropdown-menu').hide();
+        //    $('.dropdown-menu').hide();
             
-        });
+        // });
 
 
          function addCartFast(id) {
