@@ -279,7 +279,7 @@
                             
                             <div class="submenu submenu-1">
                                 @foreach($menu_all as $key => $value)
-                                <a href="{{ route('details', $value->link) }}" data-id="submenu-{{ $key }}" > {{ $value->name }} </a> 
+                                <a href="{{ route('details', $value->link) }}" data-id="submenu-{{ $key }}"  class="sub-sub"> {{ $value->name }} </a> 
                                 <?php 
 
                                     $child_menu = App\Models\groupProduct::where('parent_id', $value->id)->select('id','name', 'link')->get();
@@ -402,7 +402,7 @@
                 return ok;
             }
 
-            $('.submenu-1 a').hover(
+            $('.submenu-1 .sub-sub').hover(
 
                 function() {
                     
@@ -506,7 +506,7 @@
 
 
             // if(id !='dropdownMenuButton_100'){
-                
+
             //      $('.dropdown-menu').hide();
             // }
 
