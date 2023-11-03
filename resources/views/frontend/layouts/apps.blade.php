@@ -516,11 +516,11 @@
 
         })
 
-        // $(".nav").mouseleave(function(){
+        $(".nav").mouseleave(function(){
             
-        //    $('.dropdown-menu').hide();
+           $('.dropdown-menu').hide();
             
-        // });
+        });
 
 
          function addCartFast(id) {
