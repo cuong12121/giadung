@@ -503,17 +503,24 @@
 
             const div = $('#'+id);
 
-            $('.dropdown-menu').hide();
+
+
+            if(id !='dropdownMenuButton_100'){
+                
+                 $('.dropdown-menu').hide();
+            }
+
+           
 
             div.show();
 
         })
 
-        $(".nav li").mouseleave(function(){
+        // $(".nav").mouseleave(function(){
             
-           $('.dropdown-menu').hide();
+        //    $('.dropdown-menu').hide();
             
-        });
+        // });
 
 
          function addCartFast(id) {
