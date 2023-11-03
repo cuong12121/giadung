@@ -406,7 +406,7 @@
 
                 function() {
                     
-                  
+                    $('.submenu-1 aside').hide();
                      var id = $(this).attr('data-id');
                      $('#'+id+' aside').show();
                     
@@ -418,16 +418,10 @@
 
                 function() {
                     
-                    
-                    $('.submenu submenu-1 aside').show();
+                    $('.submenu-1 aside').show();
                 },
                 
             );
-
-          
-          
-            
-          
 
         </script>
         <nav id="menu">
@@ -515,11 +509,11 @@
 
         })
 
-        // $(".nav li").mouseleave(function(){
+        $(".nav li").mouseleave(function(){
             
-        //    $('.dropdown-menu').hide();
+           $('.dropdown-menu').hide();
             
-        // });
+        });
 
 
          function addCartFast(id) {
