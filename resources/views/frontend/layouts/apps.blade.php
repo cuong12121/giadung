@@ -286,7 +286,7 @@
                                 ?>
                                  @if(!empty($child_menu) &&  $child_menu->count()>0)
                                 <div id="submenu-{{ $key }}" class="submenu submenu-sub">
-                                    <aside>
+                                    <aside id="data-key-{{ $key }}">
                                         @foreach($child_menu as $value)
                                         <a href="{{ route('details', $value->link) }}" >
                                             {{ $value->name??'' }}
@@ -417,8 +417,8 @@
             $('.submenu-1 aside').hover(
 
                 function() {
-                    
-                    $('.submenu-1 aside').show();
+                    var id = $(this).attr('data-id');
+                    $(this).show();
                 },
                 
             );
