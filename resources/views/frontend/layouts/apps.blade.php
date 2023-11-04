@@ -137,6 +137,10 @@
                 line-height:30px;
             }
 
+            .content{
+                min-height: 800px;
+            }
+
             .submenu-sub aside{
                 display: none;
                 left: 200px;
@@ -146,6 +150,7 @@
                 border: #ddd;
                 top:0;
                 height: 340px;
+                border: 1px solid #ddd;
             }
 
         
