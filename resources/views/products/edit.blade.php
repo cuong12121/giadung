@@ -144,7 +144,7 @@
             }
             
         }
-        return $parent;
+        return $ar_products_id;
 
     }
 
