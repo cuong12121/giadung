@@ -17,44 +17,6 @@
      <?php
 
 
-    // function checkChild($n)
-    // {
-    //     // Get all of the group products at the specified level.
-    //     $data_groupProduct = App\Models\groupProduct::where('level', $n)->select('level')->get();
-
-    //     // If there are no group products at the specified level, return immediately.
-    //     if (empty($data_groupProduct)) {
-    //         return 0;
-    //     }
-
-    //     // Initialize the maximum level.
-    //     $maxLevel = $n;
-
-    //     // Iterate through the group products at the specified level.
-    //     foreach ($data_groupProduct as $groupProduct) {
-    //         // Recursively check if the group product has any child nodes.
-    //         $level = checkChild($groupProduct->level + 1);
-
-    //         // If the group product has child nodes, update the maximum level.
-    //         if ($level > $maxLevel) {
-    //             $maxLevel = $level;
-    //         }
-    //     }
-
-    //     // Return the maximum level found in this branch.
-    //     return $maxLevel;
-    // }
-
-    // function FunctionName($parent_id)
-    // {
-       
-    // }
-
-
-    // print_r(checkChild(0));
-
-    // die();
-
      function get_Group_Product($id){
         $data_groupProduct = App\Models\groupProduct::where('level', 0)->get()->pluck('id');
 
@@ -111,8 +73,7 @@
         
     }
 
-    
-
+   
     function findParent($parent_id, $n, $product_id)
     {
        // tìm cấp bậc thấp nhất của phần tử con
@@ -123,13 +84,13 @@
 
         $level_parent = $level_child-1;
 
-        $parent = App\Models\groupProduct::select('parent_id', 'product_id')->where('level',$level_parent)->get();
+        $parent = App\Models\groupProduct::select('parent_id', 'product_id', 'id')->where('level',$level_parent)->get();
 
          $ar_products_id = [];
 
         foreach ($parent as $key => $value) {
 
-            $ar_products_id[$value->parent_id] = json_decode($value->product_id);
+            $ar_products_id[$value->id] = json_decode($value->product_id);
             
         }
 
@@ -144,12 +105,10 @@
             }
             
         }
-        return $ar_products_id;
+        return $result;
 
     }
 
-    dd(findParent($parent_id, $n, $product->id))
-    
         // dd(get_Group_Product($product->id)[0]??'');
     ?>        
 
