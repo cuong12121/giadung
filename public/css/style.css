@@ -26,6 +26,7 @@ img{
     max-width:1900px;
     margin:0 auto;
     overflow:hidden;
+    font-family: 'Times New Roman';
 }
 .c, .c5, .c10, .c15, .c20, .c30, .c3, .c2 ,.c80{
     clear: both;

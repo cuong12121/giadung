@@ -29,7 +29,7 @@
        
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/swiper.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=10">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}?ver=11">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/grid.css')}}?ver=1">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -48,6 +48,12 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style type="text/css">
+
+            @font-face {
+              font-family: "Times New Roman";
+              src: url("https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap");
+            }
+
             .item-cart .form-control, .cartItem, .title-cart-pro, .item-c-btn button{
                 font-size: 2rem !important;
             }
