@@ -192,7 +192,8 @@ img{
     font-weight: normal;
     position: relative;
     /*margin-top: 18px;*/
-    font-family: "Oswald-M",Arial;
+    font-family: "Times New Roman";
+    font-size: 16px;
     text-transform:uppercase;
 }
 .nav > li{
@@ -1305,7 +1306,7 @@ a.close:hover {
     margin: 0px;
     font-size: 24px;
     color: #333;
-    font-family: "R-b";
+    font-family: "Times New Roman";
     font-weight: normal;
     text-align: left;
     text-transform: uppercase;
@@ -1341,7 +1342,7 @@ a.close:hover {
 .title-sub-cat{
     margin: 0px;
     padding: 0px;
-    font-family: "Roboto-B"; font-weight: normal;
+    font-family: "Times New Roman"; font-weight: normal;
     color: #333;
     float: left;
     font-size: 15px;
@@ -1367,7 +1368,7 @@ a.close:hover {
 .product-name{
     margin: 5px 0px;
     padding: 0px;
-    font-family: "Roboto-B";
+    font-family: "Times New Roman";
     color: #666;
     font-weight: normal;
     text-align:center;
