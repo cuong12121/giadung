@@ -80,9 +80,9 @@
 
         $level_child = level_child_max($parent_id, $n);
 
-        //level phần tử cha gần nhất bằng phần tử con trừ 1, sau đó lấy list sản phẩm của phần tử cha nó
+        //level phần tử cha gần nhất bằng phần tử con trừ 2, sau đó lấy list sản phẩm của phần tử cha nó
 
-        $level_parent = $level_child-1;
+        $level_parent = $level_child-2;
 
         $parent = App\Models\groupProduct::select('parent_id', 'product_id', 'id')->where('level',$level_parent)->get();
 
@@ -109,7 +109,7 @@
 
     }
 
-        dd(findParent($parent_id, $n, $product->id));
+       
     ?>        
 
    <!--  <div class="btn btn-warning"><a href="{{ route('metaSeos.edit', 1) }}"></a>Seo</div> -->
