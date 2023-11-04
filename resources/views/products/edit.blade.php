@@ -111,9 +111,6 @@
         
     }
 
-    $level_child = level_child_max($parent_id, $n);
-
-    dd($level_child);
     
 
     function findParent($parent_id, $n, $product_id)
@@ -147,7 +144,7 @@
             }
             
         }
-        dd($parent);
+        return $parent;
 
     }
 
