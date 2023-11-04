@@ -109,7 +109,7 @@
 
     }
 
-        // dd(get_Group_Product($product->id)[0]??'');
+        dd(findParent($parent_id, $n, $product->id));
     ?>        
 
    <!--  <div class="btn btn-warning"><a href="{{ route('metaSeos.edit', 1) }}"></a>Seo</div> -->
