@@ -147,11 +147,11 @@
             }
             
         }
-        return $result;
+        return $parent;
 
     }
 
-
+    dd(findParent($parent_id, $n, $product->id))
     
         // dd(get_Group_Product($product->id)[0]??'');
     ?>        
