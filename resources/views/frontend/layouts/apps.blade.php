@@ -133,7 +133,7 @@
             }
 
             .dropdown-menu{
-                min-width: 200px;
+                min-width: 200px !important;
                 line-height:30px;
             }
 
@@ -148,8 +148,7 @@
                 height: 340px;
             }
 
-            .submenu-1
-
+        
             @media only screen and (max-width: 767px) {
                 .header-mobile {
                     background: #3bbcc6;
