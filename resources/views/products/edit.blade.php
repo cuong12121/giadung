@@ -65,6 +65,8 @@
 
         if(!empty($list_child) && $list_child->count()>0){
 
+            // đệ quy để tìm cấp bậc cuối cùng của phần tử con
+
             $n = level_child_max($list_child[0]->id, $n);
 
             return $n;
