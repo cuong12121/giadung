@@ -51,38 +51,105 @@
     // }
 
 
-    print_r(checkChild(0));
+    // print_r(checkChild(0));
 
-    die();
+    // die();
 
      function get_Group_Product($id){
-            $data_groupProduct = App\Models\groupProduct::where('level', 0)->get()->pluck('id');
+        $data_groupProduct = App\Models\groupProduct::where('level', 0)->get()->pluck('id');
 
-            $infoProductOfGroup = App\Models\groupProduct::select('product_id', 'id')->whereIn('id', $data_groupProduct)->get()->toArray();
+        $infoProductOfGroup = App\Models\groupProduct::select('product_id', 'id')->whereIn('id', $data_groupProduct)->get()->toArray();
 
-            $result = [];
+        $result = [];
 
-            if(isset($infoProductOfGroup)){
+        if(isset($infoProductOfGroup)){
 
-                foreach($infoProductOfGroup as $key => $val){
+            foreach($infoProductOfGroup as $key => $val){
 
-                    
-                    if(!empty($val['product_id'])&& in_array($id, json_decode($val['product_id']))){
+                
+                if(!empty($val['product_id'])&& in_array($id, json_decode($val['product_id']))){
 
-                        array_push($result, $val['id']);
-                    }
-                   
-                    
+                    array_push($result, $val['id']);
                 }
-
+               
+                
             }
 
-
-            // tim nhom con trong nhom cha 
-
-            return $result;
         }
 
+
+        // tim nhom con trong nhom cha 
+
+        return $result;
+    }
+
+
+    $parent_id = get_Group_Product($product->id)[0];
+
+    $n =0;
+
+
+    $parent = App\Models\groupProduct::select('parent_id', 'product_id')->where('level',2)->get();
+
+    $ar_products_id = [];    
+
+
+
+    function level_child_max($parent_id, $n)
+    {
+        $n++;
+
+        $list_child = App\Models\groupProduct::select('id', 'level')->where('parent_id', $parent_id)->where('level', $n)->get();
+
+        if(!empty($list_child) && $list_child->count()>0){
+
+            $n = level_child_max($list_child[0]->id, $n);
+
+            return $n;
+        }
+        return $n;
+        
+    }
+    
+
+    function findParent($parent_id, $n, $product_id)
+    {
+       // tìm cấp bậc thấp nhất của phần tử con
+
+        $level_child = level_child_max($parent_id, $n);
+
+        //level phần tử cha gần nhất bằng phần tử con trừ 1, sau đó lấy list sản phẩm của phần tử cha nó
+
+        $level_parent = $level_child-1;
+
+        $parent = App\Models\groupProduct::select('parent_id', 'product_id')->where('level',$level_parent)->get();
+
+         $ar_products_id = [];
+
+        foreach ($parent as $key => $value) {
+
+            $ar_products_id[$value->parent_id] = json_decode($value->product_id);
+            
+        }
+
+        $result = $parent_id;
+
+        foreach ($ar_products_id as $key => $value) {
+
+            if(!empty($value) && in_array($product_id, $value)){
+
+                $result = $key;
+                
+
+            }
+            
+        }
+        return $result;
+
+    }
+
+
+    
         // dd(get_Group_Product($product->id)[0]??'');
     ?>        
 
@@ -95,7 +162,7 @@
     <div class="btn btn-warning {{ !empty($_GET['mota'])?'activess':'' }}"><a href="{{ route('products.edit', $product->id) }}?mota={{ $product->id }}">Mô tả</a></div>
 
 
-    <div class="btn btn-warning  {{ !empty($_GET['specifications'])?'activess':'' }}" ><a href="{{ route('filter-property') }}?group-product={{ get_Group_Product($product->id)[0]??'' }}&productId={{ $product->id }}">Thông số</a></div>
+    <div class="btn btn-warning  {{ !empty($_GET['specifications'])?'activess':'' }}" ><a href="{{ route('filter-property') }}?group-product={{ findParent($parent_id, $n, $product->id) }}&productId={{ $product->id }}">Thông số</a></div>
     <div class="btn btn-warning"><a href="{{ route('images.create') }}?{{ $product->id }}">Ảnh</a></div>
 <!--     <div class="btn btn-warning" ><a href="#mo-ta">Thông số kỹ thuật chi tiết</a></div> -->
     <div class="btn btn-warning" ><a href="{{ route('details', $product->Link) }}" target="_blank">Xem tại web</a></div>
