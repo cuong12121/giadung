@@ -17,6 +17,10 @@
             height: 250px;
         }
 
+        .tab-blog{
+            padding: 10px;
+        }
+
 
         /*.news-home-wrapper .cell-1-3{
             width: 100% !important;
@@ -300,7 +304,7 @@
                     ?>
                     @if(!empty($blog) && $blog->count()>0)
                     @foreach($blog as $value)
-                    <div class="cell-1-3 tab-cell-1-1" style="margin-bottom:20px;">
+                    <div class="cell-1-3 tab-cell-1-1 tab-blog" style="margin-bottom:20px;">
                         <a href="{{ route('details', $value->link) }}"><img src="{{  asset($value->image) }}" width="100%" alt="{{ $value->title }}"></a> 
                         <div class="c10"></div>
                         <h3 class="news-home-name"> <a href="{{ route('details', $value->link) }}">{{ $value->title }}</a> </h3>
