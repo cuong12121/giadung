@@ -98,6 +98,9 @@
             height: 254px;
             width: auto !important;
         }
+        .news-home-name{
+            font-family: 'Times New Roman';
+        }
 
        
     </style>
