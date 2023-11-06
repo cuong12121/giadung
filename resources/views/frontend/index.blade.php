@@ -98,7 +98,7 @@
             height: 254px;
             width: auto !important;
         }
-        .news-home-name{
+        .news-home-name, .rtb-box span{
             font-family: 'Times New Roman';
         }
 
