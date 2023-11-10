@@ -49,7 +49,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style type="text/css">
 
-            @font-face {
+            @font-face {    
               font-family: "Times New Roman";
               src: url("https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap");
             }
@@ -379,7 +379,11 @@
    
         @yield('content')
 
-
+        <a href="https://zalo.me/0983612828" target="_blank">
+            <div style="position: fixed; bottom: 30px; right: 52px; transform: translate(0px, 0px) !important; z-index: 2147483644; border: none; visibility: visible; right: 0px; width: 60px; height: 60px;" class="zalo-chat-widget" data-welcome-message="Điện Máy Người Việt rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="" data-height="">
+                <img src="https://page.widget.zalo.me/static/images/2.0/Logo.svg">
+            </div>
+        </a>
         <link rel="stylesheet" type="text/css" href="{{  asset('css/font.css')}}">
         <link rel="stylesheet" type="text/css" href="{{  asset('css/font-awesome-4.2.0/css/font-awesome.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{  asset('css/jquery.mmenu.all.css')}}">
