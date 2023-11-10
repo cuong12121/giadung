@@ -45,7 +45,54 @@
             </form>
         </div>
     </div>
+    <br>
+
+
+    <?php 
+        if(Cache::has('product_update')){
+
+            $data = Cache::get('product_update');
+            $i =0;
+        }
+        
+    ?>
+    @if(count($data)>0)
+   
+
+    <h2>Danh sách sản phẩm đã update</h2>
+    <div>
+        <table cellpadding="5" id="tb_padding" border="1" bordercolor="#CCCCCC" style="border-collapse:collapse;">
+            <tbody>
+                <tr bgcolor="#EEEEEE" style="font-weight:bold;">
+                    <td>STT</td>
+                    <td>Model</td>
+                    <td>Tên sản phẩm</td>
+                    <td>Số lượng </td>
+                  
+                </tr>
+
+                @foreach($data as $val)
+                
+                <?php 
+                    $i++;
+                    $product_info = DB::table('products')->where('ProductSku', $val)->first();
+                ?>
+                <tr>
+                    <td>{{ $i }}</td>
+                    <td>{{ $product_info->ProductSku }}</td>
+                    <td>{{ $product_info->Name }}</td>
+                    <td>{{ $product_info->Quantily }}</td>
+                    
+                </tr>
+                @endforeach
+                
+            </tbody>
+        </table>
+    </div>
+    @endif
 </div>
+
+
      
 </body>
 </html>
