@@ -59,7 +59,7 @@
     @if(count($data)>0)
    
 
-    <h2>Danh sách sản phẩm đã update</h2>
+    <h2>Danh sách sản phẩm đã update : {{ count($data) }} sản phẩm</h2>
     <div>
         <table cellpadding="5" id="tb_padding" border="1" bordercolor="#CCCCCC" style="border-collapse:collapse;">
             <tbody>
