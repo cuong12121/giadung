@@ -83,6 +83,8 @@ Route::get('{myslug}.html', 'showController@RegexLink')->where('myslug','(.*)dac
 
 Route::get('setting', 'showController@RegexLink');
 
+Route::get('pd-update', 'Frontend\blogController@showPdUpdate');
+
 
 
 

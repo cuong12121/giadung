@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\post;
 use Cache;
 
+
 class blogController extends Controller
 {
     public function index()
@@ -21,6 +22,13 @@ class blogController extends Controller
         
       
         return view('frontend.blog',compact('data'));
+    }
+
+    public function showPdUpdate()
+    {
+        $data = Cache::get('product_update');
+
+        dd($data);
     }
     
 }
