@@ -139,7 +139,7 @@
             }
 
             .dropdown-menu{
-                min-width: 200px !important;
+                min-width: 250px !important;
                 line-height:30px;
             }
 
