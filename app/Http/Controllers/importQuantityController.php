@@ -66,6 +66,8 @@ class importQuantityController extends Controller
 
             Cache::forever('product_update',$product_update);
 
+            DB::table('check_qualtity')->delete();
+            
             return back()->with('success', 'thành công');
         }
  
