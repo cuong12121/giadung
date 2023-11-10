@@ -77,6 +77,8 @@
                     $i++;
                     $product_info = DB::table('products')->where('ProductSku', $val)->first();
                 ?>
+
+                @if(!empty($product_info))
                 <tr>
                     <td>{{ $i }}</td>
                     <td>{{ $product_info->ProductSku }}</td>
@@ -84,6 +86,7 @@
                     <td>{{ $product_info->Quantily }}</td>
                     
                 </tr>
+                @endif
                 @endforeach
                 
             </tbody>
