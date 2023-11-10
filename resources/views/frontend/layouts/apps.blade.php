@@ -130,7 +130,7 @@
             }*/
 
              .drop-menu{
-                width: 260px;
+                width: 280px;
             }
 
 
