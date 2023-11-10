@@ -2049,3 +2049,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4c773', end
 	margin:10px 0px;
 }
 
+@media only screen and (max-width: 767px) {
+    .addcart-btn{
+        
+        font-size: 7pt;
+    }
+}   
+
