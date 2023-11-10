@@ -155,7 +155,7 @@
                                     <div class="cell-3-4 ">
                                         <span> Hàng chính hãng </span>
                                         <div class="c5"></div>
-                                        Nhập khẩu chính hãng <br> Bear tại Việt Nam
+                                        Nhập khẩu chính hãng <br>
                                     </div>
                                 </div>
                                 <div class="c"></div>

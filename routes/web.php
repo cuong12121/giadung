@@ -196,6 +196,8 @@ Route::post('filter-price-product-by-page', 'AjaxController@filterByPageFilter')
 
 Route::group(['prefix' => 'admins','middleware' => 'auth'], function() {
 
+    Route::resource('import-quantity', 'importQuantityController');
+
 
     Route::get('forget-cache-home', 'backend\indexController@index')->name('test');
 
