@@ -19,15 +19,15 @@
 
     $ar_convert_salient_features = explode('<li>', $str);
 
-    
-
-
     ?>
 
     <style type="text/css">
         
         .special-detail ul li{
             line-height: 50px;
+        }
+        .product-name{
+            text-align: left;
         }
     </style>
 
@@ -375,8 +375,6 @@
         });
         
     }
-
-    
 
 </script>
 
