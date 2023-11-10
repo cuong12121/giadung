@@ -154,8 +154,8 @@
                                     </div>
                                     <div class="cell-3-4 ">
                                         <span> Hàng chính hãng </span>
-                                        <div class="c5">uy tín</div>
-                                        Nhập khẩu chính hãng <br>
+                                        <div class="c5"></div>
+                                        Nhập khẩu chính hãng <br> Uy tín là số 1
                                     </div>
                                 </div>
                                 <div class="c"></div>
