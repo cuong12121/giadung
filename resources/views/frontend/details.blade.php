@@ -241,7 +241,7 @@
                                 <li><strong>MIỄN PH&Iacute; SHIP KHI ĐẶT H&Agrave;NG ONLINE</strong></li>
                                 <li>H&agrave;ng Ho&aacute; Nhập Khẩu Ch&iacute;nh H&atilde;ng &amp; Ưu Đ&atilde;i Thẻ VIP t&ugrave;y chương tr&igrave;nh</li>
                                 <li>Bảo H&agrave;nh 18&nbsp;Th&aacute;ng</li>
-                                <li>1 đổi 1 trong v&ograve;ng 30 ng&agrave;y đầu nếu c&oacute; lỗi nh&agrave; sản xuất</li>
+                                <li>1 đổi 1 trong vòng 7 ngày đầu nếu có lỗi nhà sản xuất</li>
                             </ul>
                         </div>
                         <div class="c10"></div>
