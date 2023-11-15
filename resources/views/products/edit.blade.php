@@ -48,7 +48,7 @@
 
     $parent_id = !empty(get_Group_Product($product->id)[0])?get_Group_Product($product->id)[0]:0;
 
-    dd($parent_id);
+  
 
     $n =0;
 
