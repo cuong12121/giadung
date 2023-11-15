@@ -48,6 +48,8 @@
 
     $parent_id = get_Group_Product($product->id)[0];
 
+    dd($parent_id);
+
     $n =0;
 
 
