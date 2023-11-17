@@ -164,6 +164,9 @@
     label{
         font-size: 1.5px !important;
     }
+    .p-names{
+        margin-left: 0px !important;
+    }
 
 
 </style>
@@ -367,7 +370,7 @@ $number_cart = count($cart);
                                                                                 <a href="{{ route('details', $infoProducts->Link) }}"><img width="300" height="360" src="{{ asset($infoProducts->Image) }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Quạt treo tường Tico B500" decoding="async" fetchpriority="high" /></a>                      
                                                                             </td>
                                                                             <td class="product-name" data-title="Sản phẩm">
-                                                                                <span> {{ $infoProducts->Name }} </span>
+                                                                                <span class="p-names"> {{ $infoProducts->Name }} </span>
                                                                                                           
                                                                             </td>
                                                                            
